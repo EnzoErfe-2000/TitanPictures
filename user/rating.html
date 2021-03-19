@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Grand Titanic Pictures</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+
+<style>
+*{
+box-sizing: border-box;
+font-family:Sans-serif;
+margin:0;
+
+}
+
+body{
+background-color:#f1f1f1;
+}
+
+.grid-container {
+display: grid;
+grid-template-columns: 0.2fr 1.8fr;
+grid-template-rows: 60px 550px 620px 600px 850px 150px;
+gap: 0px 0px;
+grid-template-areas:
+"header header"
+"navigation Content-1"
+"navigation Content-2"
+"navigation Content-3"
+"navigation Content-4"
+"footer footer";
+}
+
+.header {
+grid-area: header; 
+background-color: #666;
+padding: 30px;
+font-size: 10px;
+color: white;
+height:50px;
+}
+
+.header img{
+height:50px;
+width:auto;
+display:block;
+float:left;
+top:50%;
+transform: translateY(-50%);
+
+}
+
+.header h1{
+margin-left:20px;
+float:left;
+top:50%;
+transform: translateY(-50%);
+}
+
+.header button{
+float:right;
+top:50%;
+transform: translateY(-50%);
+
+}
+
+.header input{
+margin-right:20px;
+float:right;
+top:50%;
+transform: translateY(-50%);
+
+}
+
+.navigation { 
+grid-area: navigation; 
+background: #ccc;
+}
+.navigation #nav1{
+background-color:#f1f1f1;
+border-radius:10px;
+border-width: 1px; border-style: solid; border-color: black;
+margin-top:10px;
+margin-left:4%;
+max-width:92%;
+display:inline-block;
+}
+.navigation #nav2{
+background-color:#f1f1f1;
+border-radius:10px;
+border-width: 1px; border-style: solid; border-color: black;
+margin-top:10px;
+margin-left:4%;
+margin-right:4%;
+width:auto;
+display:inline-block;
+}
+
+.navigation #nav3{
+background-color:#f1f1f1;
+border-radius:10px;
+border-width: 1px; border-style: solid; border-color: black;
+margin-top:10px;
+margin-left:4%;
+margin-right:4%;
+margin-bottom:10px;
+width:auto;
+display:block;
+text-align:center;
+height:600px;
+vertical-align:middle;
+line-height: 600px; 
+}
+
+.navigation h3{
+padding:20px;
+}
+
+.navigation ul {
+list-style-type:none;
+width:0.2fr;
+ 
+}
+
+.navigation ul li {
+margin-bottom:10px; 
+}
+     
+
+.Content-1 { 
+grid-area: Content-1; 
+border-width: 1px; border-style: solid; border-color: black; 
+}
+.title h1{
+margin-top:20px;
+margin-left:20px; 
+}
+
+.Content-1 .preview-wrapper-flexbox {
+display: flex;
+flex-wrap: nowrap;
+overflow-x: scroll;
+overflow-y: hidden;
+margin:20px;
+border-radius:10px;
+}
+
+.Content-1 .preview-wrapper-flexbox .preview {
+flex: 0 0 auto;
+margin-right: 3px;
+padding:10px 10px 20px 10px;
+align-items:center;
+order: 2px solid $red;
+height:400px;
+background: lightgray;
+color:black;
+transition: opacity 0.2s;
+justify-content:center;
+}
+
+.preview img{
+max-width:100%;
+max-height:100%;
+display:block;
+}
+
+.preview iframe{
+margin:5% 0px 5% 0px;
+
+}
+
+
+.Content-2 { 
+grid-area: Content-2; 
+border-width: 1px; border-style: solid; border-color: black; 
+}
+
+.desc_container{
+ font-family: Arial;
+  margin:10px 20px; /* Center website */
+  max-width: 800px; /* Max width */
+  padding: 20px;
+}
+.desc_container p{
+margin-bottom:10px;
+}
+
+
+
+.heading {
+  font-size: 25px;
+  margin-right: 25px;
+}
+
+.fa {
+  font-size: 25px;
+}
+
+.checked {
+  color: orange;
+}
+
+/* Three column layout */
+.side {
+  float: left;
+  width: 15%;
+  margin-top: 10px;
+}
+
+.middle {
+  float: left;
+  width: 70%;
+  margin-top: 10px;
+}
+
+/* Place text to the right */
+.right {
+  text-align: right;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* The bar container */
+.bar-container {
+  width: 100%;
+  background-color: #f1f1f1;
+  text-align: center;
+  color: white;
+}
+
+/* Individual bars */
+.bar-5 {width: 90%; height: 18px; background-color: #4CAF50;}
+.bar-4 {width: 70%; height: 18px; background-color: #2196F3;}
+.bar-3 {width: 20%; height: 18px; background-color: #00bcd4;}
+.bar-2 {width: 10%; height: 18px; background-color: #ff9800;}
+.bar-1 {width: 5%; height: 18px; background-color: #f44336;}
+
+/* Responsive layout - make the columns stack on top of each other instead of next to each other */
+@media (max-width: 400px) {
+  .side, .middle {
+    width: 100%;
+  }
+  /* Hide the right column on small screens */
+  .right {
+    display: none;
+  }
+}
+
+.Content-3 { 
+grid-area: Content-3; 
+  box-sizing: border-box;
+  font-family: Arial;
+  margin:0px;
+  width:800px;
+  padding: 20px;
+}
+
+.rating{
+border:1px solid black;
+height:350px;
+width:1000px;
+text-align:left;
+border-radius:10px
+
+}
+
+
+
+
+
+
+.rate {
+    float: left;
+    height: 46px;
+	margin-top:10px;
+
+}
+.rate:not(:checked) > input {
+    position:absolute;
+    top:-9999px;
+}
+.rate:not(:checked) > label {
+    float:right;
+    width:1em;
+    overflow:hidden;
+    white-space:nowrap;
+    cursor:pointer;
+    font-size:30px;
+    color:#ccc;
+}
+.rate:not(:checked) > label:before {
+    content: '★ ';
+}
+.rate > input:checked ~ label {
+    color: #ffc700;    
+}
+.rate:not(:checked) > label:hover,
+.rate:not(:checked) > label:hover ~ label {
+    color: #deb217;  
+}
+.rate > input:checked + label:hover,
+.rate > input:checked + label:hover ~ label,
+.rate > input:checked ~ label:hover,
+.rate > input:checked ~ label:hover ~ label,
+.rate > label:hover ~ input:checked ~ label {
+    color: #c59b08;
+}
+
+
+
+
+.footer { 
+grid-area:footer;
+background-color: #666;
+color:white;
+border-width: 1px; border-style: solid; border-color: black; 
+
+}
+
+.footcontainer{
+text-align: center;
+}
+
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 70px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 50%;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+
+.fTi{
+color:white;text-decoration:none;
+}
+
+.fTi:hover{
+color:lightgray;
+}
+
+</style>
+
+<script>
+function validate()
+{
+	var D="", day="", CTS="", LOC="", ticket, ATck="", CTck="", email, at_req, dom_req;
+	var d_check=0, ts_check = 0, loc_check=0; check1=0, Atick_check = 0, Ctick_check = 0, tick_check=0, em_check = 0, email_flag=false;
+	
+	D = document.tcktBkFrm.optDate.value;
+	LOC = document.tcktBkFrm.location.value;
+	ATck = document.tcktBkFrm.Adult_tick.value;
+	CTck = document.tcktBkFrm.Child_tick.value;
+	email = document.tcktBkFrm.email.value;
+
+	
+	for(x=0; x<document.tcktBkFrm.timeslot.length; x++)
+	{
+		if (document.tcktBkFrm.timeslot[x].checked)
+			CTS = document.tcktBkFrm.timeslot[x].value;
+	}
+	
+	if(D == "")
+	{
+		document.getElementById('err_day').innerHTML = 'Please choose a valid day.';
+	}
+	else
+	{
+		document.getElementById('err_day').innerHTML = '&nbsp';
+		d_check = 1;
+	}
+ 	
+	if (CTS == "")
+	{
+		document.getElementById('err_slot').innerHTML = 'Please choose a valid timeslot.';
+	}	
+	else
+	{
+		document.getElementById('err_slot').innerHTML = '&nbsp;';
+		ts_check = 1;
+	}
+	
+	if (LOC == "")
+	{
+		document.getElementById('err_location').innerHTML = 'Please choose a valid cinema.';
+	}	
+	else
+	{
+		document.getElementById('err_location').innerHTML = '&nbsp;';
+		loc_check = 1;
+	}
+	
+	
+	if(d_check == 1 && ts_check ==1)
+	{
+		check1 = 1;
+	}
+	
+	if (ATck == "" || ATck == "0" || isNaN(ATck))
+	{
+		Atick_check = 0;
+	}
+	else
+	{
+		document.getElementById('err_tick').innerHTML = '&nbsp;';
+		Atick_check = 1;
+	}
+	if (CTck == "" || CTck == "0" || isNaN(CTck))
+	{
+		Ctick_check = 0;
+	}
+	else
+	{
+		Ctick_check = 1;
+	}
+	if(Atick_check == 0 && Ctick_check == 0)
+	{
+		tick_check = 0;
+		document.getElementById('err_tick').innerHTML = 'Please enter a valid amount of tickets.';
+	}
+	else{
+		tick_check = 1;
+		document.getElementById('err_tick').innerHTML = '&nbsp;';
+	}
+	
+	if(email == "")
+	{
+		document.getElementById('err_email').innerHTML = 'Please enter an email address.';
+		em_check = 0;
+	}
+	else
+	{
+		at_req = email.includes("@");
+		dom_req = email.includes(".");
+		if(at_req && dom_req)
+		{
+			document.getElementById('err_email').innerHTML = '&nbsp;';
+			em_check = 1;
+			
+		}
+		else
+		{
+			
+			document.getElementById('err_email').innerHTML = 'Please enter a valid email address.';
+			em_check = 0;
+		}
+	}
+	
+	if (check1 == 1  && loc_check==1 && tick_check == 1 && em_check == 1)
+	{
+		calculate(D, CTS, LOC, ATck, CTck, email);
+	}
+}
+ 
+function calculate(D, CTS, LOC, ATck, CTck, email)
+{
+	var AAmount=0, CAmount=0, TotalCost=0;
+	switch(CTS)
+	{
+		case '0' : result = "17:00 - 19:00"; break;
+		case '1' : result = "11:00 - 13:00"; break;
+		case '2' : result = "14:00 - 16:00"; break;
+		case '3' : result = "17:00 - 19:00"; break;
+		case '4' : result = "14:00 - 16:00"; break;
+		case '5' : result = "14:00 - 16:00"; break;	
+	}
+	
+	if(ATck == "" || ATck == "0")
+	{
+		ATck = "0";
+	}
+	if(CTck == "" || CTck == "0")
+	{
+		CTck = "0";
+	}
+	
+	AAmount = (parseFloat(ATck) * 5.00);
+	CAmount = (parseFloat(CTck) * 2.50);
+	TotalCost = parseFloat(AAmount) + parseFloat(CAmount);
+	
+	document.getElementById('resultDa').innerHTML = "<b>Date</b> : " + D;
+	document.getElementById('resultTS').innerHTML = "<b>Time slot</b> : " + result;
+	document.getElementById('resultLo').innerHTML = "<b>Cinema</b> : " + LOC;
+	document.getElementById('resultAT').innerHTML = "<b>No. of Adult tickets</b> : "+ATck;
+	document.getElementById('resultAC').innerHTML = "<b>Cost for Adult tickets</b> : $" + AAmount.toFixed(2);
+	document.getElementById('resultCT').innerHTML = "<b>No. of Child tickets</b> : " + CTck;
+	document.getElementById('resultCC').innerHTML = "<b>Cost for Child tickets</b> : $" + CAmount.toFixed(2);
+	document.getElementById('resultTotC').innerHTML = "<b>Total Cost</b> : $" + TotalCost.toFixed(2);
+	document.getElementById('resultEm').innerHTML = "<b>Send bill to</b> : " + email;
+	document.getElementById('order_bill_container').style.visibility = "visible";
+}
+</script>
+</head>
+
+<body>
+
+<div class="grid-container">
+  <div class="header">
+		<a href="index.html"><img src="image/unnamed.png"></a>
+		<a href="index.html" style="color:white;"><h1>Grand Titanic Pictures</h1></a>
+		<div>
+		<div id="top_useractions">
+			<button class="account-button" onclick ="location.href='Login.html'">Log In / Register</button>
+			<button class="search" onclick="location.href='#search.html'">Search</button>
+			<input type="text" placeholder="Search Movie...">
+			<button onclick ="location.href='ShoppingCart.html'">My Shopping Cart</button>
+		</div>
+		</div>
+  </div>
+  
+	<div class="navigation">
+		<div id="nav1">
+		<h3>Navigation</h3>
+		<ul>
+		<li><a href="index.html">Home</a>
+		</li>
+		<li><a href="MovieList.html">Movies</a></li>
+		<li style="list-style-type:circle;list-style-position:outside;">Spiderverse</li>
+		
+
+		<li><a href="account.html">Account</a></li>
+		<li><a href="About Us.html">About Us</a></li>
+		<li><a href="ContactUs.html">Contact Us</a></li>
+		</ul>
+		</div>
+		<div id="nav2">
+		<h3>Now Showing:</h3>
+		<ul>
+		<li>Spiderverse</li>
+		<li><a href="DBS_Broly.html">DBS:Broly</a></li>
+		</ul>
+		</div>
+		<div id="nav3">
+		<span>AD-Space</span>
+		</div>
+	</div>
+  
+	<div class="Content-1">
+ 
+		
+		<span class="title"><h1>Spider-Man: Into the Spider-Verse </h1></span>
+			<div class="preview-wrapper-flexbox">
+				<a class="preview">
+					<img src="image/Spiderverse-Poster1.jpg" />
+				</a>
+				<a class="preview">
+					<img src="image/Spiderverse-Poster2.jpg" />
+				</a>
+				<a class="preview">
+					<iframe width="560" height="315" src="https://www.youtube.com/embed/g4Hbz2jLxvQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></a>
+			
+			</div>
+			</div>
+	<div class="Content-2">
+		<span class="title"><h1>Reviews   4.9/5.0</h1></span>
+		<div class="desc_container">
+	<span class="heading">User Rating</span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star"></span>
+<p>4.9 average based on 254 reviews.</p>
+<hr style="border:3px solid #f1f1f1">
+
+<div class="row">
+  <div class="side">
+    <div>5 star</div>
+  </div>
+  <div class="middle">
+    <div class="bar-container">
+      <div class="bar-5"></div>
+    </div>
+  </div>
+  <div class="side right">
+    <div>164</div>
+  </div>
+  <div class="side">
+    <div>4 star</div>
+  </div>
+  <div class="middle">
+    <div class="bar-container">
+      <div class="bar-4"></div>
+    </div>
+  </div>
+  <div class="side right">
+    <div>75</div>
+  </div>
+  <div class="side">
+    <div>3 star</div>
+  </div>
+  <div class="middle">
+    <div class="bar-container">
+      <div class="bar-3"></div>
+    </div>
+  </div>
+  <div class="side right">
+    <div>14</div>
+  </div>
+  <div class="side">
+    <div>2 star</div>
+  </div>
+  <div class="middle">
+    <div class="bar-container">
+      <div class="bar-2"></div>
+    </div>
+  </div>
+  <div class="side right">
+    <div>5</div>
+  </div>
+  <div class="side">
+    <div>1 star</div>
+  </div>
+  <div class="middle">
+    <div class="bar-container">
+      <div class="bar-1"></div>
+    </div>
+  </div>
+  <div class="side right">
+    <div>1</div>
+  </div>
+</div>
+		</div>
+	</div>
+	<div class="Content-3">
+	<span class="title"><h1>Ratings</h1></span>
+	<!-- Add icon library -->
+
+<div class="rating">
+<div class="heading" style="margin-top:10px;"><b>User Rating</b></div>
+	<div class="rate">
+	
+    <input type="radio" id="star5" name="rate" value="5" />
+    <label for="star5" title="text">5 stars</label>
+    <input type="radio" id="star4" name="rate" value="4" />
+    <label for="star4" title="text">4 stars</label>
+    <input type="radio" id="star3" name="rate" value="3" />
+    <label for="star3" title="text">3 stars</label>
+    <input type="radio" id="star2" name="rate" value="2" />
+    <label for="star2" title="text">2 stars</label>
+    <input type="radio" id="star1" name="rate" value="1" />
+    <label for="star1" title="text">1 star</label>
+  </div>
+<div class="comment" style="text-align:left;margin-top:50px;"><br><b>Comments</b></div>
+<br>
+<textarea name="comments" style="margin-top:5px" rows="10" cols="100" placeholder="Enter your feedback..."></textarea>
+<input type="submit" name="submitbtn" value="Send" />
+
+</div>
+	</div>
+	
+	<div class="footer">
+		<div class="footcontainer">
+		<br />
+		<a href="index.html" class="fTi"><center><h1><b>Grand Titanic Pictures</b></h1></center></a>
+		<a href="#" class="fa fa-facebook"></a>
+		<a href="#" class="fa fa-twitter"></a>
+		<a href="#" class="fa fa-linkedin"></a>
+		</div>
+	</div>
+</div>
+</body>
+</html>

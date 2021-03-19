@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Grand Titanic Pictures</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<style>
+*{
+box-sizing: border-box;
+font-family:Sans-serif;
+margin:0;
+
+}
+
+body{
+background-color:#f1f1f1;
+}
+
+.grid-container {
+display: grid;
+grid-template-columns: 0.2fr 1.8fr;
+grid-template-rows: 60px 400px 630px 150px;
+gap: 0px 0px;
+grid-template-areas:
+"header header"
+"navigation Content-1"
+"navigation Content-2"
+"footer footer";
+}
+
+.header {
+grid-area: header; 
+background-color: #666;
+padding: 30px;
+font-size: 10px;
+color: white;
+height:50px;
+}
+
+.header img{
+height:50px;
+width:auto;
+display:block;
+float:left;
+top:50%;
+transform: translateY(-50%);
+
+}
+
+.header h1{
+margin-left:20px;
+float:left;
+top:50%;
+transform: translateY(-50%);
+}
+
+.header button{
+float:right;
+top:50%;
+transform: translateY(-50%);
+margin-right:10px;
+}
+
+.header input{
+margin-right:20px;
+float:right;
+top:50%;
+transform: translateY(-50%);
+
+}
+
+.navigation { 
+grid-area: navigation; 
+background: #ccc;
+}
+
+.navigation #nav1{
+background-color:#f1f1f1;
+border-radius:10px;
+border-width: 1px; border-style: solid; border-color: black;
+margin-top:10px;
+margin-left:4%;
+margin-right:4%;
+width:auto;
+display:block;
+}
+
+.navigation #nav2{
+background-color:#f1f1f1;
+border-radius:10px;
+border-width: 1px; border-style: solid; border-color: black;
+margin-top:10px;
+margin-left:4%;
+margin-right:4%;
+width:auto;
+display:block;
+}
+
+.navigation #nav3{
+background-color:#f1f1f1;
+border-radius:10px;
+border-width: 1px; border-style: solid; border-color: black;
+margin-top:10px;
+margin-left:4%;
+margin-right:4%;
+margin-bottom:10px;
+width:auto;
+display:block;
+text-align:center;
+height:600px;
+vertical-align:middle;
+line-height: 600px; 
+}
+
+.navigation h3{
+padding:20px;
+}
+
+.navigation ul {
+list-style-type:none;
+width:0.2fr;
+
+ 
+}
+
+.navigation ul li {
+margin-bottom:10px; 
+
+}
+
+
+
+     
+
+.Content-1 { grid-area: Content-1; border-width: 1px; border-style: solid; border-color: black; }
+
+.sect{
+background-color:lightgray;
+margin:20px;
+border-radius:20px;
+width:30%;
+height:80%;
+text-align:center;
+position:relative;
+float:left;
+}	 
+
+.sect span{
+	width:90%;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.menu_sect{
+background-color:lightgray;
+margin:20px;
+border-radius:20px;
+width:64%;
+height:80%;
+text-align:center;
+float:right;
+}
+
+.Content-2 { grid-area: Content-2; border-width: 1px; border-style: solid; border-color: black; padding:20px; }
+
+	 
+.footer { 
+grid-area:footer;
+background-color: #666;
+color:white;
+border-width: 1px; border-style: solid; border-color: black; 
+
+}
+
+.footcontainer{
+text-align: center;
+}
+
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 70px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 50%;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+
+.fTi{
+color:white;text-decoration:none;
+}
+
+.fTi:hover{
+color:lightgray;
+}
+
+#menu0Container{
+position:absolute;
+background-color: white;
+padding: 5px;
+color: black;
+text-decoration: none;
+right:60px;
+top:22%;
+transition:opacity 0.5s;
+visibility:visible;
+}
+
+#menu1Container{
+position:absolute;
+background-color: white;
+padding: 5px;
+color: black;
+text-decoration: none;
+right:60px;
+top:22%;
+transition:opacity 0.5s;
+visibility:hidden;
+width:780px;
+}
+
+
+
+.menu_table, th, td{
+border:1px solid black;
+border-collapse:collapse;
+}
+
+.menu_table{
+width:760px;
+}
+
+
+
+.cont2-container1{
+display:block;
+width:100%;
+}
+
+.Promo{
+background-color:lightgray;
+padding:20px;
+border-radius:20px;
+width:49%;
+display:inline-block;
+float:left;
+margin-right:20px;
+}
+
+.AlC{
+background-color:lightgray;
+padding:20px;
+border-radius:20px;
+width:49%;
+display:inline-block;
+
+}
+
+.list{
+display:block;
+background-color:lightgray;
+padding:20px;
+border-radius:20px;
+margin-top:20px;
+}
+
+#AO_table td, th{
+background-color:white;
+border-collapse:collapse;
+}
+
+#AO_table{
+width:100%;
+border-collapse:collapse;
+}
+
+</style>
+
+<script>
+function menu0()
+{	
+	document.getElementById("menu0Container").style.visibility = "visible";
+	document.getElementById("menu1Container").style.visibility = "hidden";
+}
+
+function menu1()
+{
+	document.getElementById("menu1Container").style.visibility = "visible";
+	document.getElementById("menu0Container").style.visibility = "hidden";
+}
+
+function addPromoAO()
+{
+	var promoID="", promoNum="";
+	var NAME, NUM, PRICE;
+	var ID_check = 0, Num_Check = 0;
+	
+	promoID = document.getElementById("P_no").value;
+	promoNum = document.getElementById("numP").value;
+
+	if(promoID == "" || isNaN(promoID))
+	{
+		ID_check = 0;
+	}
+	else
+	{
+		ID_check = 1;
+	}
+
+	if(promoNum == "" || isNaN(promoNum))
+	{
+		Num_Check = 0;
+	}
+	else
+	{
+		Num_Check = 1;
+	}
+	
+	if(ID_check == 0 || Num_Check == 0)
+	{
+		document.getElementById("errPromo").innerHTML = "Please enter a valid choice";
+	}
+	else
+	{
+		document.getElementById("errPromo").innerHTML = "&nbsp";
+		switch(parseFloat(promoID)){
+			case 1:
+				NAME = "Large Popcorn Combo";
+				break;
+			case 2:
+				NAME = "Large Nugget Combo";
+				break;
+			case 3:
+				NAME = "Regular Popcorn Combo";
+				break;
+			case 4:
+				NAME = "Goldie Horn Combo";
+				break;
+			case 5:
+				NAME = "Hot Dog Combo";
+				break;
+			default:
+		}
+		NUM = parseFloat(promoNum);
+		PRICE = NUM * 15.00;
+		addToList(NAME, NUM, PRICE);
+	}
+}
+
+function addAlCAO()
+{
+	var AlCID="", AlCNum="", AlCPrice=0;
+	var NAME, NUM, PRICE;
+	var AID_check = 0, ANum_Check = 0;
+	
+	AlCID = document.getElementById("A_no").value;
+	AlCNum = document.getElementById("numA").value;
+
+	if(AlCID == "" || isNaN(AlCID))
+	{
+		AID_check = 0;
+	}
+	else
+	{
+		AID_check = 1;
+	}
+
+	if(AlCNum == "" || isNaN(AlCNum))
+	{
+		ANum_Check = 0;
+	}
+	else
+	{
+		ANum_Check = 1;
+	}
+	
+	if(AID_check == 0 || ANum_Check == 0)
+	{
+		document.getElementById("errAlC").innerHTML = "Please enter a valid choice";
+	}
+	else
+	{
+		document.getElementById("errAlC").innerHTML = "&nbsp";
+		switch(parseFloat(AlCID)){
+			case 1:
+				NAME = "Goldie Horn - (Hot & Spicy)";
+				AlCPrice = 8.00;
+				break;
+			case 2:
+				NAME = "Nachos with Cheese Sauce";
+				AlCPrice = 9.00;
+				break;
+			case 3:
+				NAME = "Hot Dog";
+				AlCPrice = 7.50;
+				break;
+			case 4:
+				NAME = "Chicken Nugget";
+				AlCPrice = 8.00;
+				break;
+			case 5:
+				NAME = "Chicken Meatball";
+				AlCPrice = 9.50;
+				break;
+			case 6:
+				NAME = "Cheesy Chicken Strip";
+				AlCPrice = 9.00;
+				break;
+			case 7:
+				NAME = "Crispy Chicken Bits";
+				AlCPrice = 7.00;
+				break;
+			case 8:
+				NAME = "Mini Sausage (Chicken)";
+				AlCPrice = 6.50;
+				break;
+			case 9:
+				NAME = "Curry Puff";
+				AlCPrice = 6.00;
+				break;
+			case 10:
+				NAME = "Korean Drumettes";
+				AlCPrice = 8.00;
+				break;	
+			default:
+		}
+		NUM = parseFloat(AlCNum);
+		PRICE = NUM * AlCPrice;
+		addToList(NAME, NUM, PRICE);
+	}
+}
+
+function addToList(NAME, NUM, PRICE)
+{
+	var table = document.getElementById("AO_table");
+	var i=0;
+	i += table.rows.length;
+	if(i==16)
+	{
+		document.getElementById("errUndo").innerHTML = "Max number of orders reached! ";
+	}
+	else{
+	var row = table.insertRow(table.length);
+	var cell1 = row.insertCell(0);
+	var cell2 = row.insertCell(1);
+	var cell3 = row.insertCell(2);
+	var cell4 = row.insertCell(3);
+	document.getElementById("errUndo").innerHTML = "&nbsp";
+	cell1.innerHTML = "<center>" + i + "</center>";
+	cell2.innerHTML = NAME;
+	cell3.innerHTML = "<center>" + NUM + "</center>";
+	cell4.innerHTML = "<center>" + PRICE.toFixed(2) + "</center>";
+	}
+	
+}
+
+function undoAO()
+{
+	var table = document.getElementById("AO_table");
+	if(table.rows.length == 1)
+	{
+		document.getElementById("errUndo").innerHTML = "Please place an order before undoing";
+	}
+	else
+	{
+		document.getElementById("errUndo").innerHTML = "&nbsp";
+		table.deleteRow((table.rows.length - 1));
+	}
+}
+
+</script>
+<body>
+
+<div class="grid-container">
+  <div class="header">
+		<a href="index.html"><img src="image/unnamed.png"></a>
+		<a href="index.html" style="color:white;"><h1>Grand Titanic Pictures</h1></a>
+		<div>
+		<div id="top_useractions">
+			<button class="account-button" onclick ="location.href='login.html'">Log In / Register</button>
+			<button onclick ="location.href='#Search.html'">Search</button>
+			<input type="text" placeholder="Search Movie...">
+			<button onclick ="location.href='ShoppingCart.html'">My Shopping Cart</button>
+		</div>
+		</div>
+  </div>
+  
+  <div class="navigation">
+		<div id="nav1">
+		<h3>Navigation</h3>
+		<ul>
+		<li><a href="index.html">Home</a></li>
+		<li><a href="MovieList.html">Movies</a></li>
+		<li><a href="account.html">Account</a></li>
+		</ul>
+		</div>
+		<div id="nav2">
+		<h3>Now Showing:</h3>
+		<ul>
+		<li><a href="Spiderverse.html">Spiderverse</a></li>
+		<li><a href="DBS_Broly.html">DBS:Broly</a></li>
+		</ul>
+		</div>
+		<div id="nav3">
+		<span>AD-Space</span>
+		</div>
+	</div>
+  
+  <div class="Content-1">
+	<br />
+	<h3><center>Addons Menu</center></h3>
+	<div class="sect">
+	<span><p><b>Like to eat while watching movies?</b></p> 
+	<p><b>Feel free to add on some delicious snacks to your e-ticket and don't forget to redeem the snacks at the Snack Booth of your chosen cinema.</b></p>
+	</span>
+	</div>
+	<div class="menu_sect">
+		<br />
+		<div>
+			<button name="menu_btn" value="0" onclick="menu0()">Promotions</button>
+			<button name="menu_btn" value="1" onclick="menu1()">A la Carte</button>
+		</div>
+		<div>
+			<div id="menu0Container">
+			<table class="menu_table">
+				<tr>
+					<th>No.</th>
+					<th>Special Promotion Set</th>
+					<th>Price (RM)</th>
+				</tr>
+				<tr>
+					<td>01</td>
+					<td><b>Large Popcorn Combo</b> [1x caramel popcorn(L), 1x soft drink(R) or 1x mineral water]</td>
+					<td>15.00</td>
+				</tr>
+				<tr>
+					<td>02</td>
+					<td><b>Large Nugget Combo</b> [12x nugget, 1x soft drink(R) or 1x mineral water]</td>
+					<td>15.00</td>
+				</tr>
+				<tr>
+					<td>03</td>
+					<td><b>Regular Popcorn Combo</b> [1x caramel popcorn(R), 1x soft drink(R) or 1x mineral water]</td>
+					<td>15.00</td>
+				</tr>
+				<tr>
+					<td>04</td>
+					<td><b>Goldie Horn Combo</b> [1x goldie horn, 1x soft drink(R) or 1x mineral water]</td>
+					<td>15.00</td>
+				</tr>
+				<tr>
+					<td>05</td>
+					<td><b>Hot Dog Combo</b> [1x hot dog(choice of beef or chicken), 1x soft drink(R) or 1x mineral water]</td>
+					<td>15.00</td>
+				</tr>
+			</table>
+			</div>
+		
+		<div id="menu1Container">
+			<table class="menu_table">
+				<tr>
+					<th>No.</th>
+					<th>A la Carte</th>
+					<th>Price (RM)</th>
+				</tr>
+				<tr>
+					<td>01</td>
+					<td><b>Goldie Horn</b> - (Hot & Spicy)</td>
+					<td>8.50</td>
+				</tr>
+				<tr>
+					<td>02</td>
+					<td><b>Nachos with Cheese Sauce</b></td>
+					<td>9.00</td>
+				</tr>
+				<tr>
+					<td>03</td>
+					<td><b>Hot Dog</b></td>
+					<td>7.50</td>
+				</tr>
+				<tr>
+					<td>04</td>
+					<td><b>Chicken Nugget</b></td>
+					<td>8.00</td>
+				</tr>
+				<tr>
+					<td>05</td>
+					<td><b>Chicken Meatball</b></td>
+					<td>9.50</td>
+				</tr>
+				<tr>
+					<td>06</td>
+					<td><b>Cheesy Chicken Strip</b></td>
+					<td>9.00</td>
+				</tr>
+				<tr>
+					<td>07</td>
+					<td><b>Crispy Chicken Bits</b></td>
+					<td>7.00</td>
+				</tr>
+				<tr>
+					<td>08</td>
+					<td><b>Mini Sausage (Chicken)</b></td>
+					<td>6.50</td>
+				</tr>
+				<tr>
+					<td>09</td>
+					<td><b>Curry Puff</b></td>
+					<td>6.00</td>
+				</tr>
+				<tr>
+					<td>10</td>
+					<td><b>Korean Drumettes</b></td>
+					<td>8.00</td>
+				</tr>
+			</table>
+			</div>
+		</div>
+	</div>
+  </div>
+  <div class="Content-2">
+  <div class="cont2-container1">
+  <div class="Promo">
+  <span><center><b>Promotion Meals</b></center></span>
+  <br />
+  <p>No. 
+	<select id="P_no">
+	<option value="1">01</option>
+	<option value="2">02</option>
+	<option value="3">03</option>
+	<option value="4">04</option>
+	<option value="5">05</option>
+  </select>
+  
+  <span>Number : </span>
+  <input type="text" id="numP" ></input>
+  
+  <button onclick="addPromoAO();">Add</button>
+  
+  
+  <span id="errPromo" style="font-size:0.8em; color:red; font-weight:bold;">&nbsp;</span>
+</p>
+</div>
+	<div class="AlC">
+		<span><center><b>A la Carte Meals</b></center></span>
+		<br />
+		<p><span>No. : </span>
+		<select id="A_no">
+			<option value="1">01</option>
+			<option value="2">02</option>
+			<option value="3">03</option>
+			<option value="4">04</option>
+			<option value="5">05</option>
+			<option value="6">06</option>
+			<option value="7">07</option>
+			<option value="8">08</option>
+			<option value="9">09</option>
+			<option value="10">10</option>
+		</select>
+  
+		<span>Number : </span>
+		<input type="text" id="numA" ></input>
+		
+		<button onclick="addAlCAO();">Add</button>
+		
+		
+		 <span id="errAlC" style="font-size:0.8em; color:red; font-weight:bold;">&nbsp;</span>
+		</p>
+	</div>
+</div>
+  <div class="list">
+	<span><center><b>Addons</b></center></span>
+	<div class="table_container">
+	<table id="AO_table">
+	<tr>
+    <th>Item No.</th>
+    <th>Name</th>
+	<th>Quantity</th>
+	<th>Price (RM)</th>
+  </tr>
+  </table>
+  </div>
+      <button onclick="undoAO();" style="margin-top:20px;">Undo</button>
+	<span id="errUndo" style="font-size:0.8em; color:red; font-weight:bold;">&nbsp;</span>
+  </div>
+	<br />
+	<button style="padding:10px 20px;border-radius:20px;background-color:lightgreen;" onclick="location.href='ShoppingCart.html';">Proceed to Cart</button>
+  </div>
+  
+  <div class="footer">
+		<div class="footcontainer">
+		<br />
+		<a href="index.html" class="fTi"><center><h1><b>Grand Titanic Pictures</b></h1></center></a>
+		<a href="#" class="fa fa-facebook"></a>
+		<a href="#" class="fa fa-twitter"></a>
+		<a href="#" class="fa fa-linkedin"></a>
+		</div>
+</div>
+
+</div>
+</body>
+</html>

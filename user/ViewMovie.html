@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Grand Titanic Pictures</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+.myhead
+{
+	background-color:#20B2AA;
+	text-align:center;
+	color:#ffffff;
+}
+h1
+{
+	background-color:#20B2AA;
+	text-align:center;
+	color:#ffffff;
+}
+
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+
+
+form {
+  padding: 15px;
+  border: 1px solid #666;
+  background: #fff;
+  display: none;
+}
+.update1 {
+  background-color: yellow;
+  color: black;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left:10px;
+}
+.update {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+*{
+box-sizing: border-box;
+font-family:Sans-serif;
+margin:0;
+
+}
+
+body{
+background-color:#f1f1f1;
+}
+
+
+.grid-container {
+display: grid;
+grid-template-columns: 0.2fr 1.8fr;
+grid-template-rows: 60px 650px 700px 150px;
+gap: 0px 0px;
+grid-template-areas:
+"header header"
+"navigation Content-1"
+"navigation Content-2"
+"footer footer"
+
+}
+
+.header {
+grid-area: header; 
+background-color: #666;
+padding: 30px;
+font-size: 10px;
+color: white;
+
+}
+
+.header img{
+height:50px;
+width:auto;
+display:block;
+float:left;
+top:50%;
+transform: translateY(-50%);
+
+}
+
+.header h1{
+margin-left:20px;
+float:left;
+top:50%;
+transform: translateY(-50%);
+}
+
+.header button{
+float:right;
+top:50%;
+transform: translateY(-50%);
+
+}
+
+.header input{
+margin-right:20px;
+float:right;
+top:50%;
+transform: translateY(-50%);
+
+}
+
+.navigation { 
+grid-area: navigation; 
+background: #ccc;
+}
+
+.navigation #nav1{
+background-color:#f1f1f1;
+border-radius:10px;
+border-width: 1px; border-style: solid; border-color: black;
+margin-top:10px;
+margin-left:4%;
+width:92%;
+display:inline-block;
+}
+
+.navigation #nav2{
+background-color:#f1f1f1;
+border-radius:10px;
+border-width: 1px; border-style: solid; border-color: black;
+margin-top:10px;
+margin-left:4%;
+margin-right:4%;
+width:auto;
+display:inline-block;
+}
+
+.navigation #nav3{
+background-color:#f1f1f1;
+border-radius:10px;
+border-width: 1px; border-style: solid; border-color: black;
+margin-top:10px;
+margin-left:4%;
+margin-right:4%;
+margin-bottom:10px;
+width:auto;
+display:block;
+text-align:center;
+height:600px;
+vertical-align:middle;
+line-height: 600px; 
+}
+
+.navigation h3{
+padding:20px;
+}
+
+.navigation ul {
+list-style-type:none;
+width:0.2fr;
+
+ 
+}
+
+.navigation ul li {
+margin-bottom:10px; 
+
+}
+.Content-1 { 
+grid-area: Content-1; 
+border-width: none; 
+}
+
+
+
+
+
+.Content-2 { 
+grid-area: Content-2; 
+padding:20px 0px 20px 0px;
+border-width: 1px; border-style: solid; border-color: black; 
+}
+
+
+
+
+
+
+
+/*...........................................................................*/
+
+
+table{
+border:1px solid black;
+width:800px;
+text-align:center;
+float:center;
+margin-left:10px;
+}
+.tal {
+	table-layout: auto;
+	width: 100%;
+}
+</style>
+</head>
+<body>
+<div class="grid-container">
+	<div class="header">
+		<a href="index.html"><img src="image/unnamed.png"></a>
+		<a href="index.html" style="color:white;"><h1>Grand Titanic Pictures</h1></a>
+		<div>
+		<div id="top_useractions">
+			<button class="account-button" onclick ="location.href='adminlogin.html'">Log Out</button>
+		</div>
+		</div>
+	</div>
+  
+	<div class="navigation">
+		<div id="nav1">
+		<h3>Navigation</h3>
+		<ul>
+
+		<ol>
+			<!--<li><a href="nextPage.html">...</a></li>-->
+		</ol>
+		</li>
+	<li><a href="adminaccount.html">Account</a></li>
+		<li><a href="product.html">Product</a></li>
+		<li><a href="ordernew.html">Order</a></li>
+		<li><a href="viewstaff01.html">Staff</a></li>
+		<li><a href="viewmember01.html">Member</a></li>
+		<li><a href="report.html">Report</a></li>
+		</ul>
+		</div>
+	
+		</div>
+	
+  
+	<div class="Content-1">
+	<h1 class="myhead"><center>Movie List</center></h1>
+<p>
+<p><br>
+<button class="update1" onclick="document.location='product.html'"><b>Return to Choose Category</b></button>
+<button class="update" onclick="document.location='AddMovie.html'">Click to Add Movie</button>
+<button class="update" onclick="document.location='DeleteMovie.html'">Click to Delete Movie</button>
+</br></p><br>
+<table border="1px" class="tal">
+
+<tr>
+		<th>Movie Name</th>
+		<th>Trailer</th>
+		<th>Poster</th>
+		<th>Release Date</th>
+		<th>Synopsis</th>
+		<th>Cast</th>
+		<th>Director</th>
+		<th>Status</th>
+</tr>
+
+<tr>
+		<td>
+		<strong>Spider-Man: Into the Spider-Verse</strong>
+		</td>
+		<td>
+		<center>
+		<iframe width="300" height="150" src="https://www.youtube.com/embed/g4Hbz2jLxvQ" frameborder="0" 
+		allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+		allowfullscreen></iframe>
+		</center>
+		</td>
+		
+		<td>
+		<center>
+		<img src="image/Spiderverse-Poster1.jpg" style="width:150px;height:215px ;">
+		</center>
+		</td>
+		
+		<td>
+			<center> 7 December 2018</center>
+		</td>
+		
+		<td>
+			Bitten by a radioactive spider in the subway, Brooklyn teenager Miles Morales 
+			suddenly develops mysterious powers that transform him into the one and only Spider-Man. 
+			When he meets Peter Parker, he soon realizes that there are many others who share his special,
+			high-flying talents. Miles must now use his newfound skills to battle the evil Kingpin, a 
+			hulking madman who can open portals to other universes and pull different versions
+			of Spider-Man into our world.
+		</td>
+		
+		<td>
+		Shameik Moore Liev Schreiber Mahershala Ali Brian Tyree Henry
+		</td>
+		
+		<td>
+		Bob Persichetti, Peter Ramsey, Rodney Rothman
+		</td>
+
+		<td>
+		Now Showing
+		</td>
+</tr>
+
+<tr>
+		<td>
+		<strong>Dragon Ball Super: Broly</strong>
+		</td>
+		<td>
+		<center>
+		<iframe width="300" height="150" src="https://www.youtube.com/embed/FHgm89hKpXU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		</center>
+		</td>
+		<td>
+		<img src="image/DBSBroly-Poster1.jpg" style="width:150px;height:215px;">
+		</td>
+		<td>
+			<center>27 December 2018</center>
+		</td>
+		
+		<td>
+			After the Tournament of Power, Earth is peaceful. 
+			One day, Goku and Vegeta come across a new Saiyan warrior called Broly, who is not like any Saiyan they've encountered before.
+			They do not know why he is on Earth when the destruction of Planet Vegeta was supposed to have wiped out almost all Saiyans.
+			This encounter between the three Saiyans soon turns into a battle.
+		</td>
+		
+		<td>
+		Masako Nozawa Ryo Horikawa Ryusei Nakao Bin Shimada
+		</td>
+		
+		<td>
+		Tatsuya Nagamine
+		</td>
+		
+		<td>
+		Now Showing
+		</td>
+		
+</tr>
+
+<tr>
+		<td>
+		<strong>Soul</strong>
+		</td>
+		<td>
+		<center>
+		<iframe width="300" height="150" src="https://www.youtube.com/embed/xOsLIiBStEs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		</center>
+		</td>
+		<td>
+		<img src="image/Soul-Poster1.jpg" style="width:150px;height:215px;">
+		</td>
+		<td>
+			<center>6 June 2020</center>
+		</td>
+		
+		<td>
+			A musician who has lost his passion for music is transported out of his body and must find his way back with the help of an infant soul learning about herself.
+		</td>
+		
+		<td>
+		Jamie Foxx, Tina Fey, Questlove, Phylicia Rashad, Daveed Diggs
+		</td>
+		
+		<td>
+		Pete Docter
+		</td>
+		
+		<td>
+		Now Showing
+		</td>
+		
+</tr>
+
+<tr>
+		<td>
+		<strong>Venom 2: Let There Be Carnage</strong>
+		</td>
+		<td>
+		<center>
+		<iframe width="300" height="150" src="https://www.youtube.com/embed/8vmPwKvn8MY" frameborder="0" allow="accelerometer; autoplay; 
+		clipboard-write;encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		</center>
+		</td>
+		<td>
+		<img src="image/Venom2-Poster1.jpg" style="width:150px;height:215px ;">
+		</td>
+		<td>
+			<center>24 June 2021</center>
+		</td>
+		
+		<td>
+			Sequel to the 2018 film `Venom' where Venom battles the evil Carnage.
+		</td>
+		
+		<td>
+		Tom Hardy Woody Harrelson Michelle Williams Reid Scott Naomie Harris
+		</td>
+		
+		<td>
+		Andy Serkis
+		</td>
+
+		<td>
+		Coming Soon
+		</td>
+</tr>
+
+
+
+<tr>
+		<td>
+		<strong>DOCTOR STRANGE IN THE MULTIVERSE OF MADNESS</strong>
+		</td>
+		<td>
+		<center>
+		<iframe width="300" height="150" src="https://www.youtube.com/embed/zTgdtmkMT2g" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		</center>
+		</td>
+		<td>
+		<img src="image/DSITMOM-Poster1.png" style="width:150px;height:215px ;">
+		</td>
+		<td>
+			<center>6 May 2021</center>
+		</td>
+		
+		<td>
+			Following the further adventures of Dr. Stephen Strange and his research on the Time Stone.
+		</td>
+		
+		<td>
+			
+		Benedict Cumberbatch, Elizabeth Olsen, Benedict Wong, Rachel McAdams, Chiwetel Ejiofor, Xochitl Gomez
+		</td>
+		
+		<td>		
+		Sam Raimi
+		</td>
+		
+		<td>
+		Coming Soon
+		</td>
+</tr>
+<tr>
+		<td>
+		<strong>Evangelion: 3.0+1.0 Thrice Upon a Time</strong>
+		</td>
+		<td>
+		<center>
+		<iframe width="300" height="150" src="https://www.youtube.com/embed/wGsOsciMoG0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		</center>
+		</td>
+		<td>
+		<img src="image/EVA-3-1-Poster1.jpg" style="width:150px;height:215px ;">
+		</td>
+		<td>
+		<center>
+			25 January  2021
+		</center>
+		</td>
+		
+		<td>
+		Evangelion: 3.0+1.0 Thrice Upon a Time is an upcoming Japanese animated science fiction film written and chief directed by Hideaki Anno and produced by Studio Khara. It is the fourth and final film in the Rebuild of Evangelion tetralogy, based on the anime series Neon Genesis Evangelion.
+		</td>
+		
+		<td>
+			
+		Megumi Ogata, Yuko Miyamura, Megumi Hayashibara, Takehito Koyasu
+		</td>
+		
+		<td>			
+		Hideaki Anno
+		</td>
+		
+		<td>
+		Coming Soon
+		</td>
+</tr>
+</p>
+</form>
+</table>
+</div>
+</div>
+</body>
+</html>

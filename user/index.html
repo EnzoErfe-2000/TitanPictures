@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Grand Titanic Pictures</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+*{
+box-sizing: border-box;
+font-family:Sans-serif;
+margin:0;
+
+}
+
+body{
+background-color:#f1f1f1;
+}
+
+
+.grid-container {
+display: grid;
+grid-template-columns: 0.2fr 1.8fr;
+grid-template-rows: 60px 650px 700px 150px;
+gap: 0px 0px;
+grid-template-areas:
+"header header"
+"navigation Content-1"
+"navigation Content-2"
+"footer footer"
+
+}
+
+.header {
+grid-area: header; 
+background-color: #666;
+padding: 30px;
+font-size: 10px;
+color: white;
+
+}
+
+.header img{
+height:50px;
+width:auto;
+display:block;
+float:left;
+top:50%;
+transform: translateY(-50%);
+
+}
+
+.header h1{
+margin-left:20px;
+float:left;
+top:50%;
+transform: translateY(-50%);
+}
+
+.header button{
+float:right;
+top:50%;
+transform: translateY(-50%);
+margin-right:10px;
+}
+
+.header input{
+margin-right:20px;
+float:right;
+top:50%;
+transform: translateY(-50%);
+
+}
+
+.navigation { 
+grid-area: navigation; 
+background: #ccc;
+}
+
+.navigation #nav1{
+background-color:#f1f1f1;
+border-radius:10px;
+border-width: 1px; border-style: solid; border-color: black;
+margin-top:10px;
+margin-left:4%;
+margin-right:4%;
+width:auto;
+display:block;
+}
+
+.navigation #nav2{
+background-color:#f1f1f1;
+border-radius:10px;
+border-width: 1px; border-style: solid; border-color: black;
+margin-top:10px;
+margin-left:4%;
+margin-right:4%;
+width:auto;
+display:block;
+}
+
+.navigation #nav3{
+background-color:#f1f1f1;
+border-radius:10px;
+border-width: 1px; border-style: solid; border-color: black;
+margin-top:10px;
+margin-left:4%;
+margin-right:4%;
+margin-bottom:10px;
+width:auto;
+display:block;
+text-align:center;
+height:600px;
+vertical-align:middle;
+line-height: 600px; 
+}
+
+.navigation h3{
+padding:20px;
+}
+
+.navigation ul {
+list-style-type:none;
+width:0.2fr;
+
+ 
+}
+
+.navigation ul li {
+margin-bottom:10px; 
+
+}
+.Content-1 { 
+grid-area: Content-1; 
+border-width: 1px; border-style: solid; border-color: black; 
+}
+
+.Content-1 h1{
+margin:20px;
+}
+
+/* this section is modified from https://codeburst.io/how-to-create-horizontal-scrolling-containers-d8069651e9c6 */
+
+.Content-1 .movie-wrapper-flexbox {
+display: flex;
+flex-wrap: nowrap;
+overflow-x: scroll;
+overflow-y: hidden;
+max-height:100%
+}
+
+.Content-1 .movie-wrapper-flexbox .movie {
+flex: 0 0 auto;
+margin-right: 3px;
+padding:10px 0px 20px 0px;
+text-align:center;
+order: 2px solid $red;
+max-width: 100%;
+max-height: 100%;
+background: lightgray;
+color:black;
+transition: opacity 0.2s;
+}
+
+.Content-1 .movie-wrapper-flexbox .movie:hover {
+opacity:0.7;
+}
+
+/*...........................................................................*/
+
+.movie img{
+max-width: 80%;
+margin-bottom:20px;
+}
+
+.Content-2 { 
+grid-area: Content-2; 
+padding:20px 0px 20px 0px;
+border-width: 1px; border-style: solid; border-color: black; 
+}
+
+.ranking
+{
+	border:2px solid black;
+	width:60%;
+	background-color:#FFFFFF;
+	border-radius:10px;
+	margin:20px 0px 20px 20px;
+	padding:20px 20px 20px 10px;
+}
+
+.ranking li
+{
+	padding:5px;
+	font-size:20px;
+}
+
+.ranking progress{
+Margin-right:60px;
+}
+
+.ranking ol{
+margin-top:10px;
+}
+
+.ranking ul{
+margin-top:10px;
+}
+
+.preview1{
+float:right;
+}
+
+/*this section is modified from http://www.dynamicdrive.com/style/csslibrary/item/css-popup-image-viewer/*/
+
+.preview {
+text-decoration:underline;
+color:black;
+z-index:0;
+}
+
+.preview:hover{
+background-color: transparent;
+z-index: 50;
+color: lightgray;
+}
+
+.preview span{ /*CSS for enlarged image*/
+position:absolute;
+background-color: lightgray;
+padding: 5px;
+border: 1px dashed gray;
+color: black;
+text-decoration: none;
+right:60px;
+top:105%;
+transition:opacity 0.5s;
+opacity:0;
+}
+
+.preview span img{ /*CSS for enlarged image*/
+border-width: 0;
+padding: 2px;
+
+}
+
+.preview:hover span{ /*CSS for enlarged image on hover*/
+opacity:1;
+}
+
+/*...........................................................................*/
+
+
+.footer { 
+grid-area:footer;
+background-color: #666;
+color:white;
+border-width: 1px; border-style: solid; border-color: black; 
+
+}
+
+.footcontainer{
+text-align: center;
+}
+
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 70px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 50%;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+
+.fTi{
+color:white;text-decoration:none;
+}
+
+.fTi:hover{
+color:lightgray;
+}
+
+</style>
+
+</head>
+
+
+
+<body>
+
+<div class="grid-container">
+	<div class="header">
+		<a href="index.html"><img src="image/unnamed.png"></a>
+		<a href="index.html" style="color:white;"><h1>Grand Titanic Pictures</h1></a>
+		<div>
+		<div id="top_useractions">
+			<button class="account-button" onclick ="location.href='Login.html'">Log In / Register</button>
+			<button onclick ="location.href='#Search.html'">Search</button>
+			<input type="text" placeholder="Search Movie...">
+			<button onclick ="location.href='ShoppingCart.html'">My Shopping Cart</button>
+		</div>
+		</div>
+	</div>
+  
+	<div class="navigation">
+		<div id="nav1">
+		<h3>Navigation</h3>
+		<ul>
+		<li>Home
+		<ol>
+			<!--<li><a href="nextPage.html">...</a></li>-->
+		</ol>
+		</li>
+		<li><a href="MovieList.html">Movies</a></li>
+		<li><a href="account.html">Account</a></li>
+		<li><a href="About us.html">About Us</a></li>
+		<li><a href="ContactUs.html">Contact Us</a></li>
+		</ul>
+		</div>
+		<div id="nav2">
+		<h3>Now Showing:</h3>
+		<ul>
+		<li><a href="Spiderverse.html">Spiderverse</a></li>
+		<li><a href="DBS_Broly.html">DBS:Broly</a></li>
+		</ul>
+		</div>
+		<div id="nav3">
+		<span>AD-Space</span>
+		</div>
+	</div>
+  
+	<div class="Content-1">
+	<center><h1>New Movies</h1></center>
+	<div class="movie-wrapper-flexbox">
+    <a class="movie" href="Venom2.html">
+		<img src="image/Venom2-Poster1.jpg">
+		<p>Venom: Let There Be Carnage</p>
+	</a>
+	<a class="movie" href="#movie1">
+		<img src="image/EVA-3-1-Poster1.jpg">
+		<p>Evangelion: 3.0+1.0 Thrice Upon a Time</p>
+	</a>
+	<a class="movie" href="#movie2">
+		<img src="image/DSITMOM-Poster1.png">
+		<p>Doctor Strange in the Multiverse of Madness</p>
+	</a>
+	<a class="movie" href="#movie3">
+		<img src="image/Soul-Poster1.jpg">
+		<p>Soul</p>
+	</a>
+	<a class="movie" href="Spiderverse.html">
+		<img src="image/Spiderverse-Poster1.jpg">
+		<p>Spider-Man: Into the Spider-Verse</p>
+	</a>
+	<a class="movie" href="DBS_Broly.html">
+		<img src="image/DBSBroly-Poster1.jpg">
+		<p>Dragon Ball Super : Broly</p>
+	</a>
+
+	</div>
+	</div>
+  
+
+  
+  <div class="Content-2">
+	<h1><center>Popularity Ranking</center></h1>
+    <div class="ranking">
+	<span style="margin:0px 260px 0px 50px;font-size:20px;"><u><b>Recently Released</b></u></span><span style="font-size:20px;"><u><b>Viewer Ratings</b></u></span>
+	
+	<ol>
+                <li><a class="preview" href="Spiderverse.html">Spider-Man: Into the Spider-Verse<span><img src="image/Spiderverse-Poster1.jpg"/></span></a><div class="preview1"><progress id="ratings" value="97" max="100"> 97% </progress><span>97%</span></div></li>
+                <li><a class="preview" href="DBS_Broly.html">Dragon Ball Super : Broly<span><img src="image/DBSBroly-Poster1.jpg"/></span></a><div class="preview1"><progress id="ratings" value="96" max="100"> 96% </progress><span>96%</span></div></li>
+				<li><a class="preview" href="#movie3">Soul<span><img src="image/Soul-Poster1.jpg"/></span></a><div class="preview1"><progress id="ratings" value="93" max="100"> 93% </progress><span>93%</span></div></li>
+                
+    </ol>
+	<br />
+	<br />
+	<br />
+	<span style="margin:0px 320px 0px 50px;font-size:20px;"><b><u>Upcoming Movies</b></u></span><span style="font-size:20px;"><u><b>Expected Release Date</b></u></span>
+	<ul>
+		<li><a class="preview">Doctor Strange in the Multiverse of Madness<span><img src="image/DSITMOM-Poster1.png"/></span></a><span style="float:right;margin-right:60px;">March 25 2022</span></li>
+		<li><a class="preview">Evangelion: 3.0+1.0 Thrice Upon a Time<span><img src="image/EVA-3-1-Poster1.jpg"/></span></a><span style="float:right;margin-right:60px;">January 23 2022</span></li>
+		<li><a class="preview" href="Venom2.html">Venom: Let There Be Carnage<span><img src="image/Venom2-Poster1.jpg"/></span></a><span style="float:right;margin-right:60px;">June 24 2022</span></li>
+	</ul>
+	</div>
+  </div>
+  
+
+	
+
+	
+	
+	
+	<div class="footer">
+		<div class="footcontainer">
+		<br />
+		<a href="index.html" class="fTi"><center><h1><b>Grand Titanic Pictures</b></h1></center></a>
+		<a href="#" class="fa fa-facebook"></a>
+		<a href="#" class="fa fa-twitter"></a>
+		<a href="#" class="fa fa-linkedin"></a>
+		</div>
+	</div>
+</div>
+</body>
+</html>

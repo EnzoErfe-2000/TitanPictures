@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Grand Titanic Pictures</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+
+
+<style>
+*{
+box-sizing: border-box;
+font-family:Sans-serif;
+margin:0;
+
+}
+
+body{
+background-color:#f1f1f1;
+}
+
+.grid-container {
+display: grid;
+grid-template-columns: 0.2fr 1.8fr;
+grid-template-rows: 1fr 10fr 2fr 2fr 1fr;
+gap: 0px 0px;
+grid-template-areas:
+"header header"
+"navigation Content-1"
+"navigation Content-2"
+"navigation Content-3"
+"navigation Content-4";
+}
+
+.header {
+grid-area: header; 
+background-color: #666;
+padding: 30px;
+font-size: 10px;
+color: white;
+height:50px;
+}
+
+.header img{
+height:50px;
+width:auto;
+display:block;
+float:left;
+top:50%;
+transform: translateY(-50%);
+
+}
+
+.header h1{
+margin-left:20px;
+float:left;
+top:50%;
+transform: translateY(-50%);
+}
+
+.header button{
+float:right;
+top:50%;
+transform: translateY(-50%);
+
+}
+
+.header input{
+margin-right:20px;
+float:right;
+top:50%;
+transform: translateY(-50%);
+
+}
+
+fieldset{
+padding:10px;
+box-shadow:3px 5px #ccc;
+border:2px solid red;
+width:600px;
+}
+
+.hint{
+display:block;
+color:red;
+font-weight:normal;
+font-size:0.7em;
+margin-right:5px;
+}
+
+.navigation { 
+grid-area: navigation; 
+background: #ccc;
+}
+
+.navigation #nav1{
+background-color:#f1f1f1;
+border-radius:10px;
+border-width: 1px; border-style: solid; border-color: black;
+margin-top:10px;
+margin-left:4%;
+width:92%;
+display:inline-block;
+}
+
+.navigation #nav2{
+background-color:#f1f1f1;
+border-radius:10px;
+border-width: 1px; border-style: solid; border-color: black;
+margin-top:10px;
+margin-left:4%;
+margin-right:4%;
+width:auto;
+display:inline-block;
+}
+
+.navigation #nav3{
+background-color:#f1f1f1;
+border-radius:10px;
+border-width: 1px; border-style: solid; border-color: black;
+margin-top:10px;
+margin-left:4%;
+margin-right:4%;
+margin-bottom:10px;
+width:auto;
+display:block;
+text-align:center;
+height:600px;
+vertical-align:middle;
+line-height: 600px; 
+}
+.navigation h3{
+padding:20px;
+}
+
+.navigation ul {
+list-style-type:none;
+width:0.2fr;
+ 
+}
+
+.navigation ul li {
+
+margin-bottom:10px; 
+}
+
+
+
+.Content-1 { grid-area: Content-1; border-width: 1px; border-style: solid; border-color: black; }
+
+
+
+#registerfrm h2
+{
+text-align:center;
+text-decoration:underline;
+}
+
+#registerfrm p a{
+text-decoration:none;
+color:blue;
+}
+
+#registerfrm p a:hover{
+text-decoration:underline;
+color:purple;
+font-weight:bold;
+}
+.footer { 
+grid-area:footer;
+background-color: #666;
+color:white;
+border-width: 1px; border-style: solid; border-color: black; 
+
+}
+
+.footcontainer{
+text-align: center;
+}
+
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 70px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 50%;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+
+.fTi{
+color:white;text-decoration:none;
+}
+
+.fTi:hover{
+color:lightgray;
+}
+</style>
+
+<script type="text/javascript">
+function validate()
+{
+var mail,pass,cnpass,name;
+var check1=0,check2=0,check3=0,check4=0;
+name=document.memberregistration.memberName.value;
+mail=document.memberregistration.memEmail.value;
+pass=document.memberregistration.memPassword.value;
+cnpass=document.memberregistration.conPassword.value;
+
+if(name==""){
+document.getElementById('blank_name').innerHTML='Please Enter your name';
+document.memberregistration.memberName.focus();
+}
+else{
+document.getElementById('blank_name').innerHTML='&nbsp;';}
+check1=1;
+
+if(mail==""){
+document.getElementById('err_email').innerHTML='Please Enter your email';
+document.memberregistration.memEmail.focus();
+}
+else{
+document.getElementById('err_email').innerHTML='&nbsp;';}
+check2=1
+
+if(pass==""){
+document.getElementById('blank_pass').innerHTML='Please Enter your email';
+document.memberregistration.memPassword.focus();
+}
+else{
+document.getElementById('blank_pass').innerHTML='&nbsp;';}
+check3=1;
+
+if(cnpass==""){
+document.getElementById('err_pass').innerHTML='Please Enter your password';
+document.memberregistration.conPassword.focus();
+}
+else{
+document.getElementById('err_pass').innerHTML='&nbsp;';}
+check4=1;
+}
+if (check1==1 && check2 ==1 && check3 == 1 && check4 == 1){
+		document.getElementById('output').innerHTML='Registration complete';}
+	
+	
+
+</script>
+</head>
+
+
+<body>
+
+<div class="grid-container">
+  <div class="header">
+		<img src="image/unnamed.png">
+		<h1>Grand Titanic Pictures</h1>
+		<div>
+		<div id="top_useractions">
+			<button class="account-button" onclick ="location.href='Login.html'">Log In / Register</button>
+			<button class="search" onclick="location.href='#search.html'">Search</button>
+			<input type="text" placeholder="Search Movie...">
+			<button onclick ="location.href='ShoppingCart.html'">My Shopping Cart</button>
+		</div>
+		</div>
+  </div>
+  
+ <div class="navigation">
+		<div id="nav1">
+		<h3>Navigation</h3>
+		<ul>
+		<li>Home
+		<ol>
+			<!--<li><a href="nextPage.html">...</a></li>-->
+		</ol>
+		</li>
+		<li><a href="MovieList.html">Movies</a></li>
+		<li><a href="account.html">Account</a></li>
+		<li><a href="About Us.html">About Us</a></li>
+		<li><a href="ContactUs.html">Contact Us</a></li>
+		</ul>
+		</div>
+		<div id="nav2">
+		<h3>Now Showing:</h3>
+		<ul>
+		<li><a href="Spiderverse.html">Spiderverse</a></li>
+		<li><a href="DBS_Broly.html">DBS:Broly</a></li>
+		</ul>
+		</div>
+		<div id="nav3">
+		<span>AD-Space</span>
+		</div>
+	</div>
+  
+  <div class="Content-1"><center>
+  <h2>Registration Form</h2>
+  <br>
+  <p><b>Please enter the details required to register</b></p>
+<div id="registerfrm">
+<form name="memberregistration">
+
+	
+
+	<p><br>Name:
+	
+	<input type="text" name="memberName" size="30" maxlength="55" placeholder="Enter your name here"/>
+	<br><span id="blank_name" style="font-size:0.8em; color:red">&nbsp;</span>
+	</p>
+
+	<p><br>Gender:
+	<input type="radio" name="memGender" value="Male"/>Male
+	<input type="radio" name="memGender" value ="Female"/>Female
+	</p>
+
+	<p><br>Email Address:
+	
+	<input type="email" name="memEmail" placeholder="Enter your email here"/>
+	<br><span id="err_email" style="font-size:0.8em; color:red">&nbsp;</span>
+	</p>
+
+	<p><br>Password:
+	
+	<input type="password" name="memPassword" size="20" placeholder="Enter your password here"/>
+	<br><span id="blank_pass" style="font-size:0.8em; color:red">&nbsp;</span>
+	</p>
+
+	<p><br>Confirm Password:
+	
+	<input type="password" name="conPassword" size="20" placeholder="Re-enter your password here"/>
+	<br><span id="err_pass" style="font-size:0.8em; color:red">&nbsp;</span>
+	</p>
+
+	<p><br>Birthday Date:
+	<input type="date" name="memBirthday" >
+	</p>
+
+	<p><br>
+	<input type="button" name="registerbtn" value="Register" onclick="validate();"/>
+	<input type="reset" name="clearbtn" value="clear"/>
+	</p>
+	<p id="output">&nbsp;</p>
+
+
+
+ <p><br><br>Already registered? Click here <a href="login.html" target="blank"/>Sign in
+ </a>
+ </p>
+  </center></div>
+
+</div>
+<div class="footer">
+		<div class="footcontainer">
+		<br />
+		<a href="index.html" class="fTi"><center><h1><b>Grand Titanic Pictures</b></h1></center></a>
+		<a href="#" class="fa fa-facebook"></a>
+		<a href="#" class="fa fa-twitter"></a>
+		<a href="#" class="fa fa-linkedin"></a>
+		</div>
+	</div>
+</div>
+
+
+
+</body>
+</html>

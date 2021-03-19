@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Grand Titanic Pictures</title>
+
+<style>
+*{
+box-sizing: border-box;
+font-family:Sans-serif;
+margin:0;
+
+}
+
+body{
+background-color:#f1f1f1;
+}
+
+.grid-container {
+display: grid;
+grid-template-columns: 0.2fr 1.8fr;
+grid-template-rows: 60px 600px;
+gap: 0px 0px;
+grid-template-areas:
+"header header"
+"navigation Content-1";
+}
+
+.header {
+grid-area: header; 
+background-color: #666;
+padding: 30px;
+font-size: 10px;
+color: white;
+height:50px;
+}
+
+.header img{
+height:50px;
+width:auto;
+display:block;
+float:left;
+top:50%;
+transform: translateY(-50%);
+
+}
+
+.header h1{
+margin-left:20px;
+float:left;
+top:50%;
+transform: translateY(-50%);
+}
+
+.header button{
+float:right;
+top:50%;
+transform: translateY(-50%);
+
+}
+
+.header input{
+margin-right:20px;
+float:right;
+top:50%;
+transform: translateY(-50%);
+
+}
+.navigation #nav1{
+background-color:#f1f1f1;
+border-radius:10px;
+border-width: 1px; border-style: solid; border-color: black;
+margin-top:10px;
+margin-left:4%;
+width:92%;
+display:inline-block;
+}
+
+.navigation { 
+grid-area: navigation; 
+background: #aaa;
+}
+
+.navigation h3{
+padding:20px;
+}
+
+.navigation ul {
+list-style-type:none;
+width:0.2fr;
+ 
+}
+
+.navigation ul li {
+
+margin-bottom:10px; 
+}
+
+table{
+border:1px solid black;
+width:800px;
+text-align:center;
+float:center;
+}
+table{
+border:1px solid black;
+width:800px;
+text-align:center;
+float:center;
+}
+ 
+td{
+text-align:center;
+}   
+.tabtab-2 b
+{
+margin-left:40px;}
+
+</style>
+
+</head>
+
+
+<body>
+
+<div class="grid-container">
+	<div class="header">
+		<a href="index.html"><img src="image/unnamed.png"></a>
+		<a href="index.html" style="color:white;"><h1>Grand Titanic Pictures</h1></a>
+		<div>
+		<div id="top_useractions">
+			<button class="account-button" onclick ="location.href='adminlogin.html'">Log Out</button>
+		</div>
+		</div>
+	</div>
+  
+	<div class="navigation">
+		<div id="nav1">
+		<h3>Navigation</h3>
+		<ul>
+
+		<ol>
+			<!--<li><a href="nextPage.html">...</a></li>-->
+		</ol>
+		</li>
+	<li><a href="adminaccount.html">Account</a></li>
+		<li><a href="product.html">Product</a></li>
+		<li><a href="ordernew.html">Order</a></li>
+		<li><a href="viewstaff01.html">Staff</a></li>
+		<li><a href="viewmember01.html">Member</a></li>
+		<li><a href="report.html">Report</a></li>
+		</ul>
+		</div>
+	
+		</div>
+  
+  <div class="Content-1"><center><div style="margin:center;	border:10px solid #ccc;	margin-left:30px;
+border-radius:40px; width:1000px; padding:100px">
+<!-- row -->
+<h2 align="center"><br />Member List</h2><br>
+<h4 align="center"><i>Click row to edit</i><br /></h4>
+<div class="container">
+<div class="tab tab-1">
+<table id="table" border="1px">
+<tr>
+<th width="300px">Member ID</th>
+<th width="300px">Member Name</th>
+</tr>
+<tr>
+<td>A123</td>
+<td>Yifu</td>
+
+</tr>
+<tr>
+<td>A456</td>
+<td>Enzo</td>
+</tr>
+</table>
+</div>
+<div class="tabtab-2">
+<p>
+<b>Member ID :</b><input type="text" name="id" id="id">
+<b>Member Name :</b><input type="text" name="name" id="name">
+
+<p>
+<button class="addstaff" onclick="location.href='adddel_member.html'">Add</button>
+<button	onclick="ehtsr();">Edit</button>
+<button onclick="rsr();">Remove</button>
+</p>
+</div>
+
+</center></div>
+ 
+</div>
+<script>
+
+var rIndex,
+table = document.getElementById("table");
+
+function cei()
+{
+var adf = false,
+id = document.getElementById("id").value,
+name = document.getElementById("name").value,
+pos = document.getElementById("pos").value;
+
+if(id === "")
+{
+alert("Staff ID Connot Be Empty");
+adf = true;
+}
+else if(name === "")
+{
+alert("Staff Name Connot Be Empty");
+adf = true;
+}
+else if(pos === "")
+{
+alert("Staff Position Connot Be Empty");
+adf = true;
+}
+return adf;
+}
+
+
+
+function srti()
+{
+
+for(var i = 1; i < table.rows.length; i++)
+{
+table.rows[i].onclick = function()
+{
+rIndex = this.rowIndex;
+document.getElementById("id").value = this.cells[0].innerHTML;
+document.getElementById("name").value = this.cells[1].innerHTML;
+document.getElementById("pos").value = this.cells[2].innerHTML;
+};
+}
+}
+srti();
+
+function ehtsr()
+{
+var id = document.getElementById("id").value,
+name = document.getElementById("name").value,
+pos = document.getElementById("pos").value;
+if(!cei())
+{
+table.rows[rIndex].cells[0].innerHTML = id;
+table.rows[rIndex].cells[1].innerHTML = name;
+table.rows[rIndex].cells[2].innerHTML = pos;
+}
+}
+
+function rsr()
+{
+table.deleteRow(rIndex);
+document.getElementById("id").value = "";
+document.getElementById("name").value = "";
+document.getElementById("pos").value = "";
+}
+</script>
+
+</body>
+</html>

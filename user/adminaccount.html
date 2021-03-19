@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Grand Titanic Pictures</title>
+<style>
+*{
+box-sizing: border-box;
+font-family:Sans-serif;
+margin:0;
+
+}
+
+body{
+background-color:#f1f1f1;
+}
+
+.grid-container {
+display: grid;
+grid-template-columns: 0.1fr 1.0fr;
+grid-template-rows: 60px 600px;
+gap: 0px 0px;
+grid-template-areas:
+"header header"
+"navigation Content-1";
+}
+
+.header {
+grid-area: header; 
+background-color: #666;
+padding: 30px;
+font-size: 10px;
+color: white;
+height:50px;
+}
+
+.header img{
+height:50px;
+width:auto;
+display:block;
+float:left;
+top:50%;
+transform: translateY(-50%);
+
+}
+
+.header h1{
+margin-left:20px;
+float:left;
+top:50%;
+transform: translateY(-50%);
+}
+
+.header button{
+float:right;
+top:50%;
+transform: translateY(-50%);
+
+}
+
+.header input{
+margin-right:20px;
+float:right;
+top:50%;
+transform: translateY(-50%);
+
+}
+.navigation #nav1{
+background-color:#f1f1f1;
+border-radius:10px;
+border-width: 1px; border-style: solid; border-color: black;
+margin-top:10px;
+margin-left:4%;
+width:92%;
+display:inline-block;
+}
+.navigation { 
+grid-area: navigation;
+background: #aaa; 
+}
+
+.navigation h3{
+padding:20px;
+}
+
+.navigation ul {
+list-style-type:none;
+width:0.2fr;
+ 
+}
+.Content-1
+{
+grid-area: Content-1;
+
+display:block;
+} 
+
+.navigation ul li {
+margin-bottom:10px; 
+}
+
+.container{
+
+display:block;
+float:left;
+}
+.container1{
+
+background-color:lightgray;
+border-radius:20px;
+margin-left:10px;
+display:inline-block;
+width:60%;
+height:auto;
+
+}
+.abcd{
+margin-right:200px;
+font-weight:bold;
+font-size:20px;
+}
+.plm
+{
+border-collapse:collapse;
+}
+.plm td,th {
+
+padding-bottom:10px;
+}
+.container2{
+
+background-color:lightgray;
+margin-right:60px;
+display:inline-block;
+width:20%;
+height:auto;
+float:right;
+border-radius:20px;
+}
+     
+   
+</style>
+</head>
+
+
+
+<body>
+
+<div class="grid-container">
+  <div class="header">
+		<img src="image/unnamed.png">
+		<h1>Grand Titanic Pictures</h1>
+		<div>
+		<div id="top_useractions">
+			
+			<button class="account-button" onclick ="location.href='adminlogin.html'">Log Out </button>
+			
+		
+		</div>
+		</div>
+  </div>
+  
+  <div class="navigation">
+		<div id="nav1">
+		<h3>Navigation</h3>
+		<ul>
+
+		<ol>
+			<!--<li><a href="nextPage.html">...</a></li>-->
+		</ol>
+		</li>
+		<li><a href="adminaccount.html">Account</a></li>
+		<li><a href="product.html">Product</a></li>
+		<li><a href="ordernew.html">Order</a></li>
+		<li><a href="viewstaff01.html">Staff</a></li>
+		<li><a href="viewmember01.html">Member</a></li>
+		<li><a href="report.html">Report</a></li>
+		</ul>
+		</div>
+	
+		</div>
+  <div class="Content-1">      
+        <h3>Staff Profile</h3>
+		
+		<div class="container">		
+                    <div class="def">
+                        <img src="empimg/employee1.jpg" alt="yifu" style="width:250px;height:250px;"; />
+                    </div>
+                    <div class="def">
+                        <h4>
+                            Yifu</h4><strong>Staff Position:Manager</strong><br>
+                        <small><cite title="Kuala Lumpur,Kepong">Kuala Lumpur,Kepong</cite></small></br>
+                            <br>
+							<p><i>012-3456789</p>
+							<p></i>email@example.com</p>
+                            <br/>                            
+                            
+                            <p></i>Feb 14, 1980</p>
+                        <!-- Split button -->
+                        
+                            <ul class="menu" role="menu">                                
+                                <li><a href="https://myaccount.google.com/">Google +</a></li>
+                                <li><a href="https://www.linkedin.com/">Linkedin</a></li>
+                                
+                            </ul>
+                        </div>
+						
+                    </div>
+					
+					<div class="container1">
+					<table class="plm" border="1px" width="800px" style="background-color:white; margin-left:10px;" >
+	<caption>Staff Schedule</caption>
+	<tr>
+		<th>			
+			<h3>Date:</h3>
+		</th>
+		<th>			
+			<h3>Time:</h3>
+		</th>
+		<th>			
+			<h3>Meeting Location:</h3>
+		</th>
+		<th>			
+			<h3>Reason:</h3>
+		</th>
+		<th>			
+			<h3>Take Note:</h3>
+		</th>
+	</tr>
+	<tr>
+		<td>03/01/2019</td>
+		<td>1400</td>
+		<td>Sunway Piramid(Meeting Hall 1)</td>
+		<td>Monthly Meeting</td>
+		<td>Have your lunch before attend</td>
+	</tr>
+	</tr>
+	<tr>
+		<td>03/02/2019</td>
+		<td>1000</td>
+		<td>Bukit Beruang(Main Room1)</td>
+		<td>High Management Meeting</td>
+		<td>Year Report</td>
+	</tr>
+	<tr>
+		<td>20/04/2019</td>
+		<td>1300</td>
+		<td >Taman Mutiara Rini(Meeting Room3)</td>
+		<td>Interview New Staff</td>
+		<td>-</td>
+	</tr>
+	<tr>
+		<td>12/10/2019</td>
+		<td>1600</td>
+		<td>Johor Jaya(Meeting Room2)</td>	
+		<td>Weekly Meeting</td>	
+		<td>Have your tea break before attend</td>		
+	</tr>
+	
+	<tr>
+		<td>01/04/2020</td>
+		<td>1500</td>
+		<td>Taman Jaya(Meeting Room 1)</td>
+		<td>Yearly Report Meeting</td>
+		<td>Yearly Report</td>
+	</tr>
+	<tr>
+		<td>14/09/2020</td>
+		<td>1700</td>
+		<td>KLIA HQ Main Room(*)</td>	
+		<td>Emergency(*)</td>
+		<td>(staff case*)</td>
+	</tr>
+	<tr>
+		<td>01/11/2020</td>
+		<td>1400</td>
+		<td>Kepong Cinema</td>
+		<td>Movie Day</td>
+		<td>Enjoy Your Movie day Sir</td>
+	</tr>
+	<tr>
+		<td>02/01/2021</td>
+		<td>1200</td>
+		<td >KLIA HQ Main Room</td>
+		<td>Bonus(Staff)</td>
+		<td>Enjoy Your half-day Sir</td>
+	</tr>
+	<tr>
+		<td>23/01/2021</td>
+		<td>1800</td>
+		<td>KLIA HQ Main Room</td>
+		<td>Invited to Inspect New Cinema</td>
+		<td>-</td>
+	</tr>
+ 
+</table>
+	
+					
+
+					
+</div>
+<div class="container2">
+	<table class="okn" style="border-radius:20px; border=1px;  width=200px;">
+	<p><b><ul><u>Your Job Scope</u></ul></b></p>
+			<p><strong><b>Prevent is better than cure</strong></p>
+			<p><strong>On Time</strong></p>
+			<p><b>Enforce everything correctly</b></p>
+			<p><b>Salary</b>: Basic(RM12000)</p>
+			<p><b>Join date:</b>1999/02/14</p>
+			<p><b>Supervisor:</b>-</p>
+			<p><b>Allowance:</b>Petrol,Hotel,Dinner(OT)</p>
+		
+</div>
+</div>
+  
+
+
+
+
+
+
+
+</body>
+</html>

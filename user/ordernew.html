@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Grand Titanic Pictures</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script 
+src='https://kit.fontawesome.com/a076d05399.js'>
+
+</script>
+<style>
+*{
+box-sizing: border-box;
+font-family:Sans-serif;
+margin:0;
+
+}
+
+body{
+background-color:#f1f1f1;
+}
+
+
+.grid-container {
+display: grid;
+grid-template-columns: 0.2fr 1.8fr;
+grid-template-rows: 60px 650px 700px 150px;
+gap: 0px 0px;
+grid-template-areas:
+"header header"
+"navigation Content-1"
+"navigation Content-2"
+"footer footer"
+
+}
+
+.header {
+grid-area: header; 
+background-color: #666;
+padding: 30px;
+font-size: 10px;
+color: white;
+
+}
+
+.header img{
+height:50px;
+width:auto;
+display:block;
+float:left;
+top:50%;
+transform: translateY(-50%);
+
+}
+
+.header h1{
+margin-left:20px;
+float:left;
+top:50%;
+transform: translateY(-50%);
+}
+
+.header button{
+float:right;
+top:50%;
+transform: translateY(-50%);
+
+}
+
+.header input{
+margin-right:20px;
+float:right;
+top:50%;
+transform: translateY(-50%);
+
+}
+
+.navigation { 
+grid-area: navigation; 
+background: #ccc;
+}
+
+.navigation #nav1{
+background-color:#f1f1f1;
+border-radius:10px;
+border-width: 1px; border-style: solid; border-color: black;
+margin-top:10px;
+margin-left:4%;
+width:92%;
+display:inline-block;
+}
+
+.navigation #nav2{
+background-color:#f1f1f1;
+border-radius:10px;
+border-width: 1px; border-style: solid; border-color: black;
+margin-top:10px;
+margin-left:4%;
+margin-right:4%;
+width:auto;
+display:inline-block;
+}
+
+.navigation #nav3{
+background-color:#f1f1f1;
+border-radius:10px;
+border-width: 1px; border-style: solid; border-color: black;
+margin-top:10px;
+margin-left:4%;
+margin-right:4%;
+margin-bottom:10px;
+width:auto;
+display:block;
+text-align:center;
+height:600px;
+vertical-align:middle;
+line-height: 600px; 
+}
+
+.navigation h3{
+padding:20px;
+}
+
+.navigation ul {
+list-style-type:none;
+width:0.2fr;
+
+ 
+}
+
+.navigation ul li {
+margin-bottom:10px; 
+
+}
+.Content-1 { 
+grid-area: Content-1; 
+border-width: 1px; border-style: solid; border-color: black; 
+}
+
+
+
+
+
+.Content-2 { 
+grid-area: Content-2; 
+padding:20px 0px 20px 0px;
+border-width: 1px; border-style: solid; border-color: black; 
+}
+
+.hh
+{
+	background-color:#ff9900;
+	text-align:center;
+	color:#ffffff;
+}
+
+.table1 {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+.row1 {
+	background-color: DodgerBlue;
+	font-size: 20px;
+	color:#ffffff;
+}
+
+.view {
+	background-color: #00b300;
+	border: none;
+	color: white; 
+	padding: 12px 16px;
+	font-size: 16px;
+	cursor: pointer; 
+}
+.delete {
+	background-color: #ff0000;
+	border: none; 
+	color: white;
+	padding: 12px 16px;
+	font-size: 16px;
+	cursor: pointer; 
+
+
+
+
+
+/*...........................................................................*/
+
+
+table{
+border:1px solid black;
+width:800px;
+text-align:center;
+float:center;
+}
+
+</style>
+
+</head>
+
+
+
+<body>
+
+<div class="grid-container">
+	<div class="header">
+		<a href="index.html"><img src="image/unnamed.png"></a>
+		<a href="index.html" style="color:white;"><h1>Grand Titanic Pictures</h1></a>
+		<div>
+		<div id="top_useractions">
+			<button class="account-button" onclick ="location.href='index.html'">Log Out</button>
+		</div>
+		</div>
+	</div>
+  
+	<div class="navigation">
+		<div id="nav1">
+		<h3>Navigation</h3>
+		<ul>
+
+		<ol>
+			<!--<li><a href="nextPage.html">...</a></li>-->
+		</ol>
+		</li>
+		<li><a href="adminaccount.html">Account</a></li>
+		<li><a href="product.html">Product</a></li>
+		<li><a href="ordernew.html">Order</a></li>
+		<li><a href="viewstaff01.html">Staff</a></li>
+		<li><a href="viewmember01.html">Member</a></li>
+		<li><a href="report.html">Report</a></li>
+		</ul>
+		</div>
+	
+		</div>
+	
+  
+	<div class="Content-1">
+<h1 class="hh">Manage User Order </h1>
+<table class="table1" border="1px" width="500">
+
+<tr class="row1" >
+<th>User Account</th>
+<th>Action</th>
+</tr>
+
+<tr>
+<td>Patrick </td>
+<td>
+<center>
+	<button class="view" onclick="document.location='cust1.html'">View <i class='far fa-eye'></i></button>
+	<button class="delete">Delete <i class='fas fa-trash-alt'></i></button>
+</center>
+</td>
+</tr>
+
+<tr>
+<td>CareyTan </td>
+<td>
+<center>
+	<button class="view" onclick="document.location='cust2.html'">View <i class='far fa-eye'></i></button>
+	<button class="delete">Delete <i class='fas fa-trash-alt'></i></button>
+</center>
+</td>
+</tr>
+
+	
+</table>	
+</div>
+</div>
+</body>
+</html>

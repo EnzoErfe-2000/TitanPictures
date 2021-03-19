@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Grand Titanic Pictures</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<style>
+*{
+box-sizing: border-box;
+font-family:Sans-serif;
+margin:0;
+
+}
+
+body{
+background-color:#f1f1f1;
+}
+
+.grid-container {
+display: grid;
+grid-template-columns: 0.2fr 1.8fr;
+grid-template-rows: 60px 1fr 150px;
+gap: 0px 0px;
+grid-template-areas:
+"header header"
+"navigation Content-1"
+"footer footer";
+}
+
+.header {
+grid-area: header; 
+background-color: #666;
+padding: 30px;
+font-size: 10px;
+color: white;
+height:50px;
+}
+
+.header img{
+height:50px;
+width:auto;
+display:block;
+float:left;
+top:50%;
+transform: translateY(-50%);
+
+}
+
+.header h1{
+margin-left:20px;
+float:left;
+top:50%;
+transform: translateY(-50%);
+}
+
+.header button{
+float:right;
+top:50%;
+transform: translateY(-50%);
+margin-right:10px;
+}
+
+.header input{
+margin-right:20px;
+float:right;
+top:50%;
+transform: translateY(-50%);
+
+}
+
+.navigation { 
+grid-area: navigation; 
+background: #ccc;
+}
+.navigation #nav1{
+background-color:#f1f1f1;
+border-radius:10px;
+border-width: 1px; border-style: solid; border-color: black;
+margin-top:10px;
+margin-left:4%;
+margin-right:4%;
+width:auto;
+display:block;
+}
+.navigation #nav2{
+background-color:#f1f1f1;
+border-radius:10px;
+border-width: 1px; border-style: solid; border-color: black;
+margin-top:10px;
+margin-left:4%;
+margin-right:4%;
+width:auto;
+display:block;
+}
+
+.navigation #nav3{
+background-color:#f1f1f1;
+border-radius:10px;
+border-width: 1px; border-style: solid; border-color: black;
+margin-top:10px;
+margin-left:4%;
+margin-right:4%;
+margin-bottom:10px;
+width:auto;
+display:block;
+text-align:center;
+height:600px;
+vertical-align:middle;
+line-height: 600px; 
+}
+
+.navigation h3{
+padding:20px;
+}
+
+.navigation ul {
+list-style-type:none;
+width:0.2fr;
+ 
+}
+
+.navigation ul li {
+margin-bottom:10px; 
+}
+     
+.title h1{
+margin-top:20px;
+margin-left:20px; 
+text-align:center;
+}
+
+.Content-1 { 
+grid-area: Content-1; 
+border-width: 1px; border-style: solid; border-color: black; 
+}
+
+.sect{
+max-width:100%;
+}
+
+.movie_container{
+width:30%;
+height:630px;
+margin:10px 20px;
+background-color:lightgray;
+border-radius:20px;
+display:inline-block;
+text-align:center;
+transition:background-color 0.2s;
+color:black;
+font-weight:bold;
+text-decoration:none;
+}
+
+.movie_container img{
+max-width:100%;
+max-height:100%;
+padding:25px;
+}
+
+.movie_container:hover{
+background-color:darkgray;
+}
+
+.page-sect{
+height:100px;
+text-align:center;
+vertical-align:middle;
+}
+
+.p_s_button, .p_s_button img{
+border-radius:50%;
+height:100px;
+width:100px;
+background-color:lightgray;
+display:inline-block;
+}
+
+.footer { 
+grid-area:footer;
+background-color: #666;
+color:white;
+border-width: 1px; border-style: solid; border-color: black; 
+
+}
+
+.footcontainer{
+text-align: center;
+}
+
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 70px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 50%;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+
+.fTi{
+color:white;text-decoration:none;
+}
+
+.fTi:hover{
+color:lightgray;
+}
+
+
+</style>
+
+
+<body>
+
+<div class="grid-container">
+  <div class="header">
+		<a href="index.html"><img src="image/unnamed.png"></a>
+		<a href="index.html" style="color:white;"><h1>Grand Titanic Pictures</h1></a>
+		<div>
+		<div id="top_useractions">
+			<button class="account-button" onclick ="location.href='Login.html'">Log In / Register</button>
+			<button onclick ="location.href='#Search.html'">Search</button>
+			<input type="text" placeholder="Search Movie...">
+			<button onclick ="location.href='ShoppingCart.html'">My Shopping Cart</button>
+		</div>
+		</div>
+  </div>
+  
+	<div class="navigation">
+		<div id="nav1">
+		<h3>Navigation</h3>
+		<ul>
+		<li><a href="index.html">Home</a>
+		</li>
+		<li>Movies</li>
+		<l><a href="account.html">Account</a></li>
+			<li><a href="About us.html">About Us</a></li>
+		<li><a href="ContactUs.html">Contact Us</a></li>
+		</ul>
+		</div>
+		<div id="nav2">
+		<h3>Now Showing:</h3>
+		<ul>
+		<li><a href="Spiderverse.html">Spiderverse</a></li>
+		<li><a href="DBS_Broly.html">DBS:Broly</a></li>
+		</ul>
+		</div>
+		<div id="nav3">
+		<span>AD-Space</span>
+		</div>
+	</div>
+  
+	<div class="Content-1">
+		<span class="title"><h1>Movie List</h1></span>
+	
+		<div class="sect">
+			<a href="Venom2.html" class="movie_container">
+				<div><img src="image/Venom2-Poster1.jpg"></div>
+				<div><p>Venom: Let There Be Carnage</p></div>
+			</a>
+			<a href="DBS_Broly.html" class="movie_container">
+				<div><img src="image/DBSBroly-Poster1.jpg"></div>
+				<div><p>Dragon Ball Super: Broly</p></div>
+			</a>
+			<a href="Spiderverse.html" class="movie_container">
+				<div><img src="image/Spiderverse-Poster1.jpg"></div>
+				<div><p>Spider-Man: Into the Spider-Verse</p></div>
+			</a>
+		</div>
+		<div class="sect">
+			<a href="#movie.html" class="movie_container">
+				<div><img src="image/EVA-3-1-Poster1.jpg"></div>
+				<div><p>Evangelion: 3.0+1.0 Thrice Upon a Time</p></div>
+			</a>
+			<a href="#movie.html" class="movie_container">
+				<div><img src="image/DSITMOM-Poster1.png"></div>
+				<div><p>Doctor Strange in the Multiverse of Madness</p></div>
+			</a>
+			<a href="#movie.html" class="movie_container">
+				<div><img src="image/Soul-Poster1.jpg"></div>
+				<div><p>Soul</p></div>
+			</a>
+		</div>
+		<div class="page-sect">
+			<a href="#prevPage.html" class="p_s_button">
+			<img src="image/ArrowLeft.png">
+			</a>
+			<span style="font-size:50px;font-weight:bold;margin: 0px 50px;">1</span>
+			<a href="#nextPage.html" class="p_s_button">
+			<img src="image/ArrowLeft.png" style="transform: rotate(180deg);">
+			</a>
+		</div>
+
+		
+	</div>
+	<div class="footer">
+		<div class="footcontainer">
+		<br />
+		<a href="index.html" class="fTi"><center><h1><b>Grand Titanic Pictures</b></h1></center></a>
+		<a href="#" class="fa fa-facebook"></a>
+		<a href="#" class="fa fa-twitter"></a>
+		<a href="#" class="fa fa-linkedin"></a>
+		</div>
+	</div>
+</div>
+</body>
+</html>

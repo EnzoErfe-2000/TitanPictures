@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Grand Titanic Pictures</title>
+<style>
+*{
+box-sizing: border-box;
+font-family:Sans-serif;
+margin:0;
+
+}
+
+body{
+background-color:#f1f1f1;
+}
+
+.grid-container {
+display: grid;
+grid-template-columns: 0.1fr 1.0fr;
+grid-template-rows: 60px 600px;
+gap: 0px 0px;
+grid-template-areas:
+"header header"
+"navigation Content-1";
+}
+
+.header {
+grid-area: header; 
+background-color: #666;
+padding: 30px;
+font-size: 10px;
+color: white;
+height:50px;
+}
+
+.header img{
+height:50px;
+width:auto;
+display:block;
+float:left;
+top:50%;
+transform: translateY(-50%);
+
+}
+
+.header h1{
+margin-left:20px;
+float:left;
+top:50%;
+transform: translateY(-50%);
+}
+
+.header button{
+float:right;
+top:50%;
+transform: translateY(-50%);
+
+}
+
+.header input{
+margin-right:20px;
+float:right;
+top:50%;
+transform: translateY(-50%);
+
+}
+.navigation #nav1{
+background-color:#f1f1f1;
+border-radius:10px;
+border-width: 1px; border-style: solid; border-color: black;
+margin-top:10px;
+margin-left:4%;
+width:92%;
+display:inline-block;
+}
+.navigation { 
+grid-area: navigation; 
+background-color:#aaa;
+}
+
+.navigation h3{
+padding:20px;
+}
+
+.navigation ul {
+list-style-type:none;
+width:0.2fr;
+ 
+}
+.Content-1
+{
+grid-area: Content-1;
+
+display:block;
+} 
+
+.navigation ul li {
+margin-bottom:10px; 
+}
+
+.container{
+
+display:block;
+float:left;
+}
+.container1{
+
+background-color:lightgray;
+border-radius:20px;
+margin-left:10px;
+display:inline-block;
+width:60%;
+height:auto;
+
+}
+.abcd{
+margin-right:200px;
+font-weight:bold;
+font-size:20px;
+}
+.plm
+{
+border-collapse:collapse;
+}
+.plm td,th {
+
+padding-bottom:10px;
+}
+.container2{
+
+margin-right:60px;
+display:inline-block;
+width:20%;
+height:auto;
+float:right;
+border-radius:20px;
+}
+     
+   
+</style>
+</head>
+
+
+
+<body>
+
+<div class="grid-container">
+  <div class="header">
+		<img src="image/unnamed.png">
+		<h1>Grand Titanic Pictures</h1>
+		<div>
+		<div id="top_useractions">
+			
+			<button class="account-button" onclick ="location.href='index.html'">Log Out </button>
+			<button onclick ="location.href='#Search.html'">Search</button>
+			<input type="text" placeholder="Search Movie...">
+			<button onclick ="location.href='ShoppingCart.html'">My Shopping Cart</button>
+		</div>
+		</div>
+  </div>
+  
+  <div class="navigation">
+		<div id="nav1">
+		<h3>Navigation</h3>
+		<ul>
+		<li>Home
+		<ol>
+			<!--<li><a href="nextPage.html">...</a></li>-->
+		</ol>
+		<li><a href="index.html">Home</a>
+		</li>
+		<li><a href="MovieList.html">Movies</a></li>
+		<li><Account</li>
+		<li><a href="About us.html">About Us</a></li>
+		<li><a href="ContactUs.html">Contact Us</a></li>
+		</ul>
+		</div>
+	
+		</div>
+  
+  <div class="Content-1">      
+        <h3>User Profile</h3>
+		
+		<div class="container">		
+                    <div class="def">
+                        <img src="empimg/employee3.jpg" alt="yifu" style="width:250px;height:250px;"; />
+                    </div>
+                    <div class="def">
+                        <h4>
+                            Daren</h4><strong>Customer</strong><br>
+                        <small><cite title="Johor Bahru,Skudai">Johor Bahru,Skudai</cite></small></br>
+                            <br>
+							<p></i>email@example.com</p>
+                            <br/>                            
+                            
+                            <p></i>Aug 31, 1999</p>
+                        <!-- Split button -->
+                        
+                            <ul class="menu" role="menu">                                
+                                <li><a href="https://myaccount.google.com/">Google +</a></li>
+                                <li><a href="https://www.facebook.com/">Facebook</a></li>
+                                
+                            </ul>
+                        </div>
+						
+                    </div>
+					
+					<div class="container1">
+					<table class="plm" border="1px" width="800px" style="background-color:white; margin-left:10px;" >
+	<caption>User Purchase History</caption>
+	<tr>
+		<th>			
+			<h3>Date:</h3>
+		</th>
+		<th>			
+			<h3>Movie name:</h3>
+		</th>
+		<th>			
+			<h3>Cinema Location:</h3>
+		</th>
+		<th>			
+			<h3>Combo Food Set:</h3>
+		</th>
+		<th>			
+			<h3>Type Movie:</h3>
+		</th>
+	</tr>
+	<tr>
+		<td>31/12/2017</td>
+		<td>The Null</td>
+		<td>Bukit Indah</td>
+		<td>Large Popcorn Combo</td>
+		<td>Horron</td>
+	</tr>
+	</tr>
+	<tr>
+		<td>03/01/2018</td>
+		<td>Fast And Furious 4</td>
+		<td>Bukit Beruang</td>
+		<td>Large Nugget Combo</td>
+		<td>Action</td>
+	</tr>
+	<tr>
+		<td>15/02/2018</td>
+		<td>Jumanji</td>
+		<td >Taman Tasek</td>
+		<td>Korean Drumettes</td>
+		<td>Adventure</td>
+	</tr>
+	<tr>
+		<td>10/04/2019</td>
+		<td>Love Story</td>
+		<td>Taman University</td>	
+		<td>Curry Puff</td>	
+		<td>Romantic</td>		
+	</tr>
+	
+	<tr>
+		<td>20/06/2019</td>
+		<td>Jumanji2</td>
+		<td>Taman Jaya</td>
+		<td>Mini Sausage (Chicken)</td>
+		<td>Adventure</td>
+	</tr>
+	<tr>
+		<td>30/12/2019</td>
+		<td>Welcome to Wonderland</td>
+		<td>Impian Emas</td>	
+		<td>Crispy Chicken Bites</td>
+		<td>Adventure</td>
+	</tr>
+	<tr>
+		<td>01/11/2020</td>
+		<td>Love Story2</td>
+		<td >Johor Jaya</td>
+		<td>Cheesy Chicken Strip</td>
+		<td>Romantic</td>
+	</tr>
+	<tr>
+		<td>11/12/2020</td>
+		<td>Batman</td>
+		<td >KLIA</td>
+		<td>Chicken Nugget</td>
+		<td>Action</td>
+	</tr>
+	<tr>
+		<td>20/01/2021</td>
+		<td>Spiderman3</td>
+		<td>Pulau Pinang</td>
+		<td>Nachos with Cheese Sauce</td>
+		<td>Action</td>
+	</tr>
+ 
+</table>
+	
+					
+
+					
+</div>
+<div class="container2">
+	<table class="okn" style="border-radius:20px; border=1px;  width=200px;">
+	<caption>Points</caption>
+	<tr>
+		<th>			
+			<h3>Your Reward Points:</h3>
+			<td>8400</td>
+		</th>
+	</tr>
+		
+</div>
+</div>
+  
+
+
+
+
+
+
+
+</body>
+</html>

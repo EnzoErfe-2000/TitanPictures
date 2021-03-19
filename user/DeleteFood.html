@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Delete Promotion Set</title>
+<link rel="stylesheet" type="text/css" href="color.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+.del {
+  background-color: #000000;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.alc-button {
+  background-color: red;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left:10px;
+}
+*{
+box-sizing: border-box;
+font-family:Sans-serif;
+margin:0;
+
+}
+
+body{
+background-color:#f1f1f1;
+}
+
+
+.grid-container {
+display: grid;
+grid-template-columns: 0.2fr 1.8fr;
+grid-template-rows: 60px 650px 700px 150px;
+gap: 0px 0px;
+grid-template-areas:
+"header header"
+"navigation Content-1"
+"navigation Content-2"
+"footer footer"
+
+}
+
+.header {
+grid-area: header; 
+background-color: #666;
+padding: 30px;
+font-size: 10px;
+color: white;
+
+}
+
+.header img{
+height:50px;
+width:auto;
+display:block;
+float:left;
+top:50%;
+transform: translateY(-50%);
+
+}
+
+.header h1{
+margin-left:20px;
+float:left;
+top:50%;
+transform: translateY(-50%);
+}
+
+.header button{
+float:right;
+top:50%;
+transform: translateY(-50%);
+
+}
+
+.header input{
+margin-right:20px;
+float:right;
+top:50%;
+transform: translateY(-50%);
+
+}
+
+.navigation { 
+grid-area: navigation; 
+background: #ccc;
+}
+
+.navigation #nav1{
+background-color:#f1f1f1;
+border-radius:10px;
+border-width: 1px; border-style: solid; border-color: black;
+margin-top:10px;
+margin-left:4%;
+width:92%;
+display:inline-block;
+}
+
+.navigation #nav2{
+background-color:#f1f1f1;
+border-radius:10px;
+border-width: 1px; border-style: solid; border-color: black;
+margin-top:10px;
+margin-left:4%;
+margin-right:4%;
+width:auto;
+display:inline-block;
+}
+
+.navigation #nav3{
+background-color:#f1f1f1;
+border-radius:10px;
+border-width: 1px; border-style: solid; border-color: black;
+margin-top:10px;
+margin-left:4%;
+margin-right:4%;
+margin-bottom:10px;
+width:auto;
+display:block;
+text-align:center;
+height:600px;
+vertical-align:middle;
+line-height: 600px; 
+}
+
+.navigation h3{
+padding:20px;
+}
+
+.navigation ul {
+list-style-type:none;
+width:0.2fr;
+
+ 
+}
+
+.navigation ul li {
+margin-bottom:10px; 
+
+}
+.Content-1 { 
+grid-area: Content-1; 
+border-width: none; 
+}
+.Content-2 { 
+grid-area: Content-2; 
+padding:20px 0px 20px 0px;
+border-width: 1px; border-style: solid; border-color: black; 
+}
+.t1{
+margin:120px;}
+.back{
+margin-left:10px;}
+</style>
+</head>
+<body>
+<div class="grid-container">
+	<div class="header">
+		<a href="index.html"><img src="image/unnamed.png"></a>
+		<a href="index.html" style="color:white;"><h1>Grand Titanic Pictures</h1></a>
+		<div>
+		<div id="top_useractions">
+			<button class="account-button" onclick ="location.href='adminlogin.html'">Log Out</button>
+		</div>
+		</div>
+	</div>
+  
+	<div class="navigation">
+		<div id="nav1">
+		<h3>Navigation</h3>
+		<ul>
+
+		<ol>
+			<!--<li><a href="nextPage.html">...</a></li>-->
+		</ol>
+		</li>
+	<li><a href="adminaccount.html">Account</a></li>
+		<li><a href="product.html">Product</a></li>
+		<li><a href="ordernew.html">Order</a></li>
+		<li><a href="viewstaff01.html">Staff</a></li>
+		<li><a href="viewmember01.html">Member</a></li>
+		<li><a href="report.html">Report</a></li>
+		</ul>
+		</div>
+	
+		</div>
+	
+  
+	<div class="Content-1">
+<p><button class="alc-button" onclick ="location.href='Set Promotion List.html'">Back</button></p>
+<p class="back"><b>Promotion Set:</b>
+<select name="order_status" style="font-size:15px">
+		<option value="Large Popcorn Combo">1) Large Popcorn Combo[1x caramel popcorn(L), 1x soft drink(R) or 1x mineral water]</option>
+		<option value="Large Nugget Combo">2) Large Nugget Combo[12x nugget, 1x soft drink(R) or 1x mineral water]</option>
+		<option value="Regular Popcorn Combo">3) Regular Popcorn Combo[1x caramel popcorn(R), 1x soft drink(R) or 1x mineral water]</option>
+		<option value="Goldie Horn Combo">4) Goldie Horn Combo[1x goldie horn, 1x soft drink(R) or 1x mineral water]</option>
+		<option value="Hot Dog Combo">5) Hot Dog Combo[1x hot dog(choice of beef or chicken), 1x soft drink(R) or 1x mineral water]</option>
+	</select>
+	<button class="del" onclick="location.href='FoodDelSuccess.html'">Delete</button>
+</p><br>
+<h4 align="center">=====SET PROMOTION LIST=====</h4>
+<div class="t1">
+    <div class="special promotion">
+        <table id="table" border="10px" align="center">
+        <tr>
+			<th width="60px">No</th>
+			<th width="750px">Special Promotion Set</th>
+			<th width="100px">Price (RM)</th>
+        </tr>
+		<tr>
+			<td align="center">1</td>
+            <td><b style="font-weight: bold; font-size:20px">Large Popcorn Combo</b>[1x caramel popcorn(L), 1x soft drink(R) or 1x mineral water]<img src="image\pop1.png"/ id='pop1'></td>
+            <td align="center">15.00</td>
+        </tr>
+		<tr>
+			<td align="center">2</td>
+            <td><b style="font-weight: bold; font-size:20px">Large Nugget Combo</b>[12x nugget, 1x soft drink(R) or 1x mineral water]<img src="image\pop2.png"/ id='pop2'></td>
+            <td align="center">18.00</td>
+        </tr>
+		<tr>
+			<td align="center">3</td>
+            <td><b style="font-weight: bold; font-size:20px">Regular Popcorn Combo</b>[1x caramel popcorn(R), 1x soft drink(R) or 1x mineral water]<img src="image\pop3.png"/ id='pop3'></td>
+            <td align="center">13.00</td>
+        </tr>
+		<tr>
+			<td align="center">4</td>
+            <td><b style="font-weight: bold; font-size:20px">Goldie Horn Combo</b>[1x goldie horn, 1x soft drink(R) or 1x mineral water]<img src="image\pop4.png"/ id='pop4'></td>
+            <td align="center">17.00</td>
+        </tr>
+		<tr>
+			<td align="center">5</td>
+            <td><b style="font-weight: bold; font-size:20px">Hot Dog Combo</b>[1x hot dog(choice of beef or chicken), 1x soft drink(R) or 1x mineral water]<img src="image\pop5.png"/ id='pop5'></td>
+            <td align="center">14.00</td>
+        </tr>
+</p>
+</div>
+</body>
+</html>

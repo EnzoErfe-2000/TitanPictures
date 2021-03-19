@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Grand Titanic Pictures</title>
+
+
+<style>
+*{
+box-sizing: border-box;
+}
+
+html{
+box-sizing:border-box;
+}
+
+body{
+background-color:#f1f1f1;
+font-family:Sans-serif;
+margin:0;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.grid-container {
+display: grid;
+grid-template-columns: 0.2fr 1.8fr;
+grid-template-rows: 60px 300px 100px 100px 100px;
+gap: 0px 0px;
+grid-template-areas:
+"header header"
+"navigation Content-1"
+"navigation Content-2"
+"navigation Content-3"
+"navigation Content-4";
+}
+
+.header {
+grid-area: header; 
+background-color: #666;
+padding: 30px;
+font-size: 10px;
+color: white;
+height:50px;
+}
+
+.header img{
+height:50px;
+width:auto;
+display:block;
+float:left;
+top:50%;
+transform: translateY(-50%);
+
+}
+
+.header h1{
+margin-left:20px;
+float:left;
+top:50%;
+transform: translateY(-50%);
+}
+
+.header button{
+float:right;
+top:50%;
+transform: translateY(-50%);
+
+}
+
+.header input{
+margin-right:20px;
+float:right;
+top:50%;
+transform: translateY(-50%);
+
+}
+
+.navigation { 
+grid-area: navigation; 
+background: #ccc;
+}
+
+.navigation #nav1{
+background-color:#f1f1f1;
+border-radius:10px;
+border-width: 1px; border-style: solid; border-color: black;
+margin-top:10px;
+margin-left:4%;
+width:92%;
+display:inline-block;
+}
+
+.navigation #nav2{
+background-color:#f1f1f1;
+border-radius:10px;
+border-width: 1px; border-style: solid; border-color: black;
+margin-top:10px;
+margin-left:4%;
+margin-right:4%;
+width:auto;
+display:inline-block;
+}
+
+.navigation #nav3{
+background-color:#f1f1f1;
+border-radius:10px;
+border-width: 1px; border-style: solid; border-color: black;
+margin-top:10px;
+margin-left:4%;
+margin-right:4%;
+margin-bottom:10px;
+width:auto;
+display:block;
+text-align:center;
+height:600px;
+vertical-align:middle;
+line-height: 600px; 
+}
+
+.navigation h3{
+padding:20px;
+}
+
+.navigation ul {
+list-style-type:none;
+width:0.2fr;
+ 
+}
+
+.navigation ul li {
+
+margin-bottom:10px; 
+}
+
+.row{
+background-color:gray;
+}
+
+.column {
+  float: left;
+  width: 33.3%;
+  margin-bottom:0px;
+  padding: 0 8px;
+  background-color:#f1f1f1;
+  text-align:center;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 8px;
+}
+
+.about-section {
+  height:300px;
+  margin-bottom:0px;
+  text-align: center;
+  background-image:url(image/images.jpg);
+  background-repeat:no-repeat;
+  background-size:cover;
+  background-position:center;
+  color: white;
+ padding:50px;
+}
+
+.about-section p{
+margin:0px;
+padding:0;
+}
+
+
+.container {
+  padding: 0 16px;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+  margin:0px;
+}
+
+
+
+
+
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+
+</style>
+</head>
+<body>
+
+<div class="grid-container">
+  <div class="header">
+		<img src="image/unnamed.png">
+		<h1>Grand Titanic Pictures</h1>
+		<div>
+		<div id="top_useractions">
+			<button class="account-button" onclick ="location.href='Login.html'">Log In / Register</button>
+			<button class="search" onclick="location.href='#search.html'">Search</button>
+			<input type="text" placeholder="Search Movie...">
+			<button onclick ="location.href='ShoppingCart.html'">My Shopping Cart</button>
+		</div>
+		</div>
+  </div>
+
+ 	<div class="navigation">
+		<div id="nav1">
+		<h3>Navigation</h3>
+		<ul>
+		<li>Home
+		<ol>
+			<!--<li><a href="nextPage.html">...</a></li>-->
+		</ol>
+		</li>
+		<li><a href="MovieList.html">Movies</a></li>
+		<li><a href="account.html">Account</a></li>
+		<li>About Us</li>
+		<li><a href="ContactUs.html">Contact Us</a></li>
+		</ul>
+		</div>
+		<div id="nav2">
+		<h3>Now Showing:</h3>
+		<ul>
+		<li><a href="Spiderverse.html">Spiderverse</a></li>
+		<li><a href="DBS_Broly.html">DBS:Broly</a></li>
+		</ul>
+		</div>
+		<div id="nav3">
+		<span>AD-Space</span>
+		</div>
+	</div>
+  
+  <div class="about-section">
+
+    <h1>About Us Page</h1>
+  <p>Grand Titanic Pictures is cinema company that consist of 5 members.</p>
+  <p>Resize the browser window to see that this page is responsive by the way.</p>
+ </div>
+
+  <div class="row">
+  <h2 style="text-align:center">Our Team</h2>
+  <div class="column">
+   <div class="card">
+  <img src="empimg/employee1.jpg" alt="yifu" style="width:200px;height:250px;"; />
+  <div class="container">
+  <h2>Chiam Yi Fu</h2>
+  <p class="title">Student ID:1191202682</p>
+  <p>Description on me</p>
+  <p>1191202682@student.mmu.edu.my</p>
+  <p><button class="button">Contact</button></p>
+  </div>
+  </div>
+  </div>
+  
+  
+
+  <div class="column">
+   <div class="card">
+  <img src="empimg/employee2.jpg" alt="yifu" style="width:180px;height:250px;"; />
+  <div class="container">
+  <h2>Hoo Shi Yao</h2>
+  <p class="title">Student ID:1191200506</p>
+  <p>Description on me</p>
+  <p>1191200506@student.mmu.edu.my</p>
+  <p><button class="button">Contact</button></p>
+  </div>
+  </div>
+  </div>
+  
+  
+ 
+  <div class="column">
+   <div class="card">
+  <img src="empimg/employee3.jpg" alt="yifu" style="width:250px;height:250px;"; />
+  <div class="container">
+  <h2>Ley Chin Chong</h2>
+  <p class="title">Student ID:1191202597</p>
+  <p>Description on me</p>
+  <p>1191202597@student.mmu.edu.my</p>
+  <p><button class="button">Contact</button></p>
+  </div>
+  </div>
+  </div>
+  
+  
+ 
+  <div class="column">
+   <div class="card">
+  <img src="empimg/employee4.jpg" alt="yifu" style="width:250px;height:250px;"; />
+  <div class="container">
+  <h2>Enzo Joaquin Itona Erfe</h2>
+  <p class="title">Student ID:1191201980</p>
+  <p>Description on me</p>
+  <p>1191201980@student.mmu.edu.my</p>
+  <p><button class="button">Contact</button></p>
+  </div>
+  </div>
+  </div>
+  
+  
+   
+  <div class="column">
+   <div class="card">
+  <img src="empimg/employee5.png" alt="yifu" style="width:250px;height:250px;"; />
+  <div class="container">
+  <h2>Teng S'Her</h2>
+  <p class="title">Student ID:1191202277</p>
+  <p>Description on me</p>
+  <p>1191202277@student.mmu.edu.my</p>
+  <p><button class="button">Contact</button></p>
+  </div>
+  </div>
+  </div>
+  </div>
+  
+
+
+
+
+
+
+
+</body>
+</html>

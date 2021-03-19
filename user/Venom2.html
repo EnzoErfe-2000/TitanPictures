@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Grand Titanic Pictures</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<style>
+*{
+box-sizing: border-box;
+font-family:Sans-serif;
+margin:0;
+
+}
+
+body{
+background-color:#f1f1f1;
+}
+
+.grid-container {
+display: grid;
+grid-template-columns: 0.2fr 1.8fr;
+grid-template-rows: 60px 550px 470px 600px 700px 150px;
+gap: 0px 0px;
+grid-template-areas:
+"header header"
+"navigation Content-1"
+"navigation Content-2"
+"navigation Content-3"
+"navigation Content-4"
+"footer footer";
+}
+
+.header {
+grid-area: header; 
+background-color: #666;
+padding: 30px;
+font-size: 10px;
+color: white;
+height:50px;
+}
+
+.header img{
+height:50px;
+width:auto;
+display:block;
+float:left;
+top:50%;
+transform: translateY(-50%);
+
+}
+
+.header h1{
+margin-left:20px;
+float:left;
+top:50%;
+transform: translateY(-50%);
+}
+
+.header button{
+float:right;
+top:50%;
+transform: translateY(-50%);
+margin-right:10px;
+}
+
+.header input{
+margin-right:20px;
+float:right;
+top:50%;
+transform: translateY(-50%);
+
+}
+
+.navigation { 
+grid-area: navigation; 
+background: #ccc;
+}
+.navigation #nav1{
+background-color:#f1f1f1;
+border-radius:10px;
+border-width: 1px; border-style: solid; border-color: black;
+margin-top:10px;
+margin-left:4%;
+margin-right:4%;
+width:auto;
+display:block;
+}
+.navigation #nav2{
+background-color:#f1f1f1;
+border-radius:10px;
+border-width: 1px; border-style: solid; border-color: black;
+margin-top:10px;
+margin-left:4%;
+margin-right:4%;
+width:auto;
+display:block;
+}
+
+.navigation #nav3{
+background-color:#f1f1f1;
+border-radius:10px;
+border-width: 1px; border-style: solid; border-color: black;
+margin-top:10px;
+margin-left:4%;
+margin-right:4%;
+margin-bottom:10px;
+width:auto;
+display:block;
+text-align:center;
+height:600px;
+vertical-align:middle;
+line-height: 600px; 
+}
+
+.navigation h3{
+padding:20px;
+}
+
+.navigation ul {
+list-style-type:none;
+width:0.2fr;
+ 
+}
+
+.navigation ul li {
+margin-bottom:10px; 
+}
+
+
+
+     
+
+.Content-1 { 
+grid-area: Content-1; 
+border-width: 1px; border-style: solid; border-color: black; 
+}
+.title h1{
+margin-top:20px;
+margin-left:20px; 
+}
+
+.Content-1 .preview-wrapper-flexbox {
+display: flex;
+flex-wrap: nowrap;
+overflow-x: scroll;
+overflow-y: hidden;
+margin:20px;
+border-radius:10px;
+}
+
+.Content-1 .preview-wrapper-flexbox .preview {
+flex: 0 0 auto;
+margin-right: 3px;
+padding:10px 10px 20px 10px;
+align-items:center;
+order: 2px solid $red;
+height:400px;
+background: lightgray;
+color:black;
+transition: opacity 0.2s;
+justify-content:center;
+}
+
+.preview img{
+max-width:100%;
+max-height:100%;
+display:block;
+}
+
+.preview iframe{
+margin:5% 0px 5% 0px;
+
+}
+
+
+.Content-2 { 
+grid-area: Content-2; 
+border-width: 1px; border-style: solid; border-color: black; 
+}
+
+.desc_container{
+max-width:100%;
+max-height:100%;
+height:auto;
+margin:20px;
+background-color:lightgray;
+border-radius:10px;
+padding:20px;
+}
+.desc_container p{
+margin-bottom:10px;
+}
+.desc_container span{
+float:right;
+margin-right:60%;
+}
+
+
+.Content-3 { 
+grid-area: Content-3; 
+border-width: 1px; border-style: solid; border-color: black; 
+}
+.table_container{
+padding-top:50px;
+}
+.showtime_table{
+margin:auto;
+width:80%;
+background-color:white;
+border-collapse:collapse;
+}
+#showtime{
+background-color:green;
+}
+
+th, td{
+height:30px;
+border-width: 1px; border-style: solid; border-color: black;
+}
+
+.Content-4 { 
+grid-area: Content-4;
+border-width: 1px; border-style: solid; border-color: black; 
+}
+
+.frm_container{
+z-index=0;
+background-color:lightgray;
+border-radius:10px;
+padding:20px;
+margin:20px;
+}
+
+.frm_title{
+font-weight:bold;
+text-decoration:underline;
+font-size:20px;
+}
+
+.sect{
+background-color:white;
+border-radius:10px;
+padding:10px;
+margin-top:10px;
+height:auto;
+}
+
+.sect_title{
+font-weight:bold;
+text-decoration:underline;
+font-size:20px;
+}
+
+.time_choice_container{
+float:left;
+margin-right:50px;
+}
+
+#order_bill_container{
+visibility:hidden;
+}
+
+.chckout_btn button{
+margin: 0 0 0 20px;
+position: absolute;
+top: 50%;
+-ms-transform: translateY(-50%);
+transform: translateY(-50%);
+color:white;
+font-weight:bold;
+background-color:lightgreen;
+border-radius:10px;
+border: 1px solid lightgray;
+padding:10px 20px;
+}
+
+
+.NA_notice{
+position:relative;
+background-color: lightgray;
+padding: 5px;
+display:inline-block;
+font-size:50px;
+font-weight:bold;
+color: black;
+text-decoration: none;
+left:17.5%;
+transform:tranlateX(-50%);
+margin:200px 0px;
+}
+
+.footer { 
+grid-area:footer;
+background-color: #666;
+color:white;
+border-width: 1px; border-style: solid; border-color: black; 
+
+}
+
+.footcontainer{
+text-align: center;
+}
+
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 70px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 50%;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+
+.fTi{
+color:white;text-decoration:none;
+}
+
+.fTi:hover{
+color:lightgray;
+}
+
+</style>
+
+<body>
+
+<div class="grid-container">
+  <div class="header">
+		<a href="index.html"><img src="image/unnamed.png"></a>
+		<a href="index.html" style="color:white;"><h1>Grand Titanic Pictures</h1></a>
+		<div>
+		<div id="top_useractions">
+			<button class="account-button" onclick ="location.href='Login.html'">Log In / Register</button>
+			<button onclick ="location.href='#Search.html'">Search</button>
+			<input type="text" placeholder="Search Movie...">
+			<button onclick ="location.href='ShoppingCart.html'">My Shopping Cart</button>
+		</div>
+		</div>
+  </div>
+  
+	<div class="navigation">
+		<div id="nav1">
+		<h3>Navigation</h3>
+		<ul>
+		<li><a href="index.html">Home</a>
+		</li>
+		<li><a href="MovieList.html">Movies</a></li>
+		<li style="list-style-type:circle;list-style-position:outside;">Venom 2</li>
+		<li><a href="account.html">Account</a></li>
+			<li><a href="About us.html">About Us</a></li>
+		<li><a href="ContactUs.html">Contact Us</a></li>
+		</ul>
+		</div>
+		<div id="nav2">
+		<h3>Now Showing:</h3>
+		<ul>
+		<li><a href="Spiderverse.html">Spiderverse</a></li>
+		<li><a href="DBS_Broly.html">DBS:Broly</a></li>
+		</ul>
+		</div>
+		<div id="nav3">
+		<span>AD-Space</span>
+		</div>
+	</div>
+  
+	<div class="Content-1">
+ 
+		<span class="title"><h1>Venom: Let There Be Carnage</h1></span>
+			<div class="preview-wrapper-flexbox">
+				<a class="preview">
+					<img src="image/Venom2-Poster1.jpg" />
+				</a>
+				<a class="preview">
+					<img src="image/Venom2-Poster2.jpg" />
+				</a>
+				<a class="preview">
+					<img src="image/Venom2-Poster2.jpg" />
+				</a>
+				<a class="preview">
+					<iframe width="560" height="315" src="https://www.youtube.com/embed/kYeGOBiOQK0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</a>
+				<a class="preview">
+					<iframe width="560" height="315" src="https://www.youtube.com/embed/8vmPwKvn8MY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</a>
+			</div>
+	</div>
+	<div class="Content-2">
+		<span class="title"><h1>Movie Description</h1></span>
+		<div class="desc_container">
+			<p><b>Language:</b><span>English</span></p>
+			<p><b>Plot:</b> <span style="margin-right:60%;">Unknown / Unreleased. Sequel to the 2018 film 'Venom'.</span></p>
+			<p><b>Director:</b><span>Andy Serkis</span></p>
+			<p><b>Writer:</b><span>Kelly Marcel</span></p>
+			<p><b>Cast: </b></p>
+			<p>Tom Hardy				<span>Eddie Brock / Venom</span></p>
+			<p>Michelle Williams		<span>Anne Weying</span></p>
+			<p>Woody Harrelson			<span>Cletus Kasady</span></p>
+			<p>Naomie Harris			<span>Shriek (rumored)</span></p>
+			<p>Stephen Graham</p>
+			<p>Reid Scott				<span>Dr. Dan Lewis</span></p>
+			
+		</div>
+	</div>
+	<div class="Content-3">
+		<span class="title"><h1>Showtimes</h1></span>
+		<div class="table_container">
+		<table class="showtime_table">
+			<tr>
+				<th>Day/Time</th><th>Monday</th><th>Tuesday</th><th>Wednesday</th><th>Thursday</th><th>Friday</th><th>Saturday</th><th>Sunday</th>
+			</tr>
+			<tr>
+				<th>10:00</th><th colspan="7" rowspan="13">Movie Not Released Yet</th>
+			</tr>
+			<tr>
+				<th>11:00</th>
+			</tr>
+			<tr>
+				<th>12:00</th>
+			</tr>
+			<tr>
+				<th>13:00</th>
+			</tr>
+			<tr>
+				<th>14:00</th>
+			</tr>
+			<tr>
+				<th>15:00</th>
+			</tr>
+			<tr>
+				<th>16:00</th>
+			</tr>
+			<tr>
+				<th>17:00</th>
+			</tr>
+			<tr>
+				<th>18:00</th>
+			</tr>
+			<tr>
+				<th>19:00</th>
+			</tr>
+			<tr>
+				<th>20:00</th>
+			</tr>
+			<tr>
+				<th>21:00</th>
+			</tr>
+			<tr>
+				<th>22:00</th>
+			</tr>
+		</table>
+		</div>
+	</div>
+	<div class="Content-4">
+		<span class="title"><h1>Ticket Booking</h1></span>
+		<div class="frm_container">
+		<p class="frm_title">Venom: Let There Be Carnage</p>
+			<div class="NA_notice">Movie Unreleased. Unable to book.
+			</div>
+			
+			</div>
+  
+	</div>
+		<div class="footer">
+		<div class="footcontainer">
+		<br />
+		<a href="index.html" class="fTi"><center><h1><b>Grand Titanic Pictures</b></h1></center></a>
+		<a href="#" class="fa fa-facebook"></a>
+		<a href="#" class="fa fa-twitter"></a>
+		<a href="#" class="fa fa-linkedin"></a>
+		</div>
+	</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+* {
+box-sizing: border-box;
+font-family:Sans-serif;
+margin:0;
+}
+.grid-container {
+display: grid;
+grid-template-columns: 0.2fr 1.8fr;
+grid-template-rows: 60px 650px 700px 150px;
+gap: 0px 0px;
+grid-template-areas:
+"header header"
+"navigation Content-1"
+"navigation Content-2"
+"footer footer"
+}
+.header {
+grid-area: header; 
+background-color: #666;
+padding: 30px;
+font-size: 10px;
+color: white;
+
+}
+.header img{
+height:50px;
+width:auto;
+display:block;
+float:left;
+top:50%;
+transform: translateY(-50%);
+
+}
+.header h1{
+margin-left:20px;
+float:left;
+top:50%;
+transform: translateY(-50%);
+}
+.header button{
+float:right;
+top:50%;
+transform: translateY(-50%);
+
+}
+
+.header input{
+margin-right:20px;
+float:right;
+top:50%;
+transform: translateY(-50%);
+
+}
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+.navigation { 
+grid-area: navigation; 
+background: #ccc;
+}
+
+.navigation #nav1{
+background-color:#f1f1f1;
+border-radius:10px;
+border-width: 1px; border-style: solid; border-color: black;
+margin-top:10px;
+margin-left:4%;
+width:92%;
+display:inline-block;
+}
+
+.navigation #nav2{
+background-color:#f1f1f1;
+border-radius:10px;
+border-width: 1px; border-style: solid; border-color: black;
+margin-top:10px;
+margin-left:4%;
+margin-right:4%;
+width:auto;
+display:inline-block;
+}
+
+.navigation #nav3{
+background-color:#f1f1f1;
+border-radius:10px;
+border-width: 1px; border-style: solid; border-color: black;
+margin-top:10px;
+margin-left:4%;
+margin-right:4%;
+margin-bottom:10px;
+width:auto;
+display:block;
+text-align:center;
+height:600px;
+vertical-align:middle;
+line-height: 600px; 
+}
+
+.navigation h3{
+padding:20px;
+}
+
+.navigation ul {
+list-style-type:none;
+width:0.2fr;
+
+ 
+}
+
+.navigation ul li {
+margin-bottom:10px; 
+
+}
+.Content-1 { 
+grid-area: Content-1; 
+border-width: none; 
+text-align:center;
+margin:20px 40px 0px 40px;
+}
+
+
+
+
+
+.Content-2 { 
+grid-area: Content-2; 
+padding:20px 0px 20px 0px;
+border-width: 1px; border-style: solid; border-color: black; 
+}
+.button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+.submit {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.reset {
+  background-color: #f44336;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+ }
+
+</style>
+<title>Add Movie</title>
+</head>
+ 
+<body>
+ <div class="grid-container">
+	<div class="header">
+		<a href="index.html"><img src="image/unnamed.png"></a>
+		<a href="index.html" style="color:white;"><h1>Grand Titanic Pictures</h1></a>
+		<div>
+		<div id="top_useractions">
+			<button class="account-button" onclick ="location.href='adminlogin.html'">Log Out</button>
+		</div>
+		</div>
+	</div>
+  
+	<div class="navigation">
+		<div id="nav1">
+		<h3>Navigation</h3>
+		<ul>
+	
+		<ol>
+			<!--<li><a href="nextPage.html">...</a></li>-->
+		</ol>
+		</li>
+		<li><a href="adminaccount.html">Account</a></li>
+		<li><a href="product.html">Product</a></li>
+		<li><a href="ordernew.html">Order</a></li>
+		<li><a href="viewstaff01.html">Staff</a></li>
+		<li><a href="viewmember01.html">Member</a></li>
+		<li><a href="report.html">Report</a></li>
+		</ul>
+		</div>
+	
+		</div>
+	
+  
+	<div class="Content-1">
+<h4><br> Update for new movie</h4>
+<p><br> Movie name : <input type="text" name="mem_name" size="100" maxlength="100" placeholder="Type movie name here" >
+</p>
+<p><br> Trailer link: <input type="url" name="trailer_link" placeholder="Paste a video URL here"">
+</p>
+<p>
+<label for="poster"><br> Select a movie poster:</label>
+	<input type="file" id="myfile" name="myfile"><br><br>
+</p> 
+
+<p><br> Release Date : <input type="date" name="release_date"/></p>
+
+<p><br> Movie's synopsis : <br>
+	<textarea name="movie_synopsis" rows="4" cols="60" placeholder="Write the synopsis here..."></textarea>
+</p>
+ 
+<p><br> Cast: <input type="text" name="cast_name" placeholder="Type cast name here...">
+</p>
+
+<p><br> Director: <input type="text" name="director_name" placeholder="Type director name here...">
+</p> 
+
+<p><br> Movie Status : 	<input type="radio" name="movie_status" value="Now Showing" > Now Showing
+					<input type="radio" name="movie_status" value="Coming Soon" > Coming Soon
+</p>
+<p><br>
+<button class="submit" onclick="location.href='SubmitAdd.html'">Submit</button>
+<button class="reset" onclick="location.href='AddMovie.html'">Clear</button></br>
+</p>
+</form>
+</body>
+</html>
